@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Welcome to FutureGrid Teefaa! &mdash; FutureGrid teefaa  documentation</title>
+    <title>Welcome to Cloudmesh Teefaa! &mdash; Cloudmesh Teefaa  documentation</title>
     
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -30,7 +30,7 @@
     <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
     <script type="text/javascript" src="_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
-    <link rel="top" title="FutureGrid teefaa  documentation" href="#" />
+    <link rel="top" title="Cloudmesh Teefaa  documentation" href="#" />
     <link rel="next" title="Users Guide (Under Construction)" href="usersguide.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -85,8 +85,9 @@
               <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">Welcome to FutureGrid Teefaa!</a><ul>
-<li><a class="reference internal" href="#design">Design</a></li>
+<li><a class="reference internal" href="#">Welcome to Cloudmesh Teefaa!</a><ul>
+<li><a class="reference internal" href="#requirements">Requirements</a></li>
+<li><a class="reference internal" href="#simple-design">Simple Design</a></li>
 <li><a class="reference internal" href="#support">Support</a></li>
 <li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
 </ul>
@@ -122,8 +123,8 @@
     class="visible-desktop"><img
    style="position: absolute; top: 40px; right: 0; border: 0;"
    src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png"
-   alt="Fork me on GitHub"></a><div class="section" id="welcome-to-futuregrid-teefaa">
-<h1>Welcome to FutureGrid Teefaa!<a class="headerlink" href="#welcome-to-futuregrid-teefaa" title="Permalink to this headline">¶</a></h1>
+   alt="Fork me on GitHub"></a><div class="section" id="welcome-to-cloudmesh-teefaa">
+<h1>Welcome to Cloudmesh Teefaa!<a class="headerlink" href="#welcome-to-cloudmesh-teefaa" title="Permalink to this headline">¶</a></h1>
 <div class="sidebar">
 <p class="first sidebar-title">Table of Contents</p>
 <div class="toctree-wrapper last compound">
@@ -146,10 +147,12 @@
 </ul>
 </div>
 </div>
-<p>FutureGrid Teefaa is a set of deployment scripts for System Provisioning(includes
+<p>Cloudmesh Teefaa is a set of deployment scripts for System Provisioning(includes
 Baremetal Provisioning). Which is designed as simple, flexible, programable and
 collaboratable so that users/developers can build, test and appreciate new Open
-Source Technologies as quickly as possible.</p>
+Source Technologies as quickly as possible. So we hope that will happen to you soon.</p>
+<div class="section" id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
 <p>FG Teefaa requires(/thanks to):</p>
 <ul class="simple">
 <li>Python, version 2.7</li>
@@ -163,16 +166,16 @@ Source Technologies as quickly as possible.</p>
 <li>Bittorrent Sync (for high-speed multiple Baremetal Provisioning)</li>
 <li>Torque Resource Manager (for scheduing Baremetal Provisioning)</li>
 </ul>
-<p>The goal of FG Teefaa is to provide the scripts and methods to easily provision Destributed
-System on baremetal/virtual hosts on multiple sites.</p>
-<div class="section" id="design">
-<h2>Design<a class="headerlink" href="#design" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="simple-design">
+<h2>Simple Design<a class="headerlink" href="#simple-design" title="Permalink to this headline">¶</a></h2>
 <ul>
-<li><p class="first">Scripts are written in Fabric</p>
+<li><p class="first">Scripts for handling Shell commands are written in Fabric and Cuisine.</p>
 </li>
-<li><p class="first">Configuration files are written in YAML.</p>
+<li><p class="first">Configuration files are written in YAML format. One of the goals of Teefaa
+is to make it understandable by reading the YAML files.</p>
 </li>
-<li><p class="first">Each scripts has three types of directories as shown below.</p>
+<li><p class="first">Each scripts has four types of directories as shown below.</p>
 <div class="highlight-python"><pre>|-- fabfile/EXAMPLE.py
 |-- ymlfile/EXAMPLE
 |           |-- config1.yml
