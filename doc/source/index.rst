@@ -24,7 +24,7 @@ Cloudmesh Teefaa is a set of deployment scripts for system provisioning with
 focus on  baremetal provisioning. It is designed to be simple, flexible, programable. 
 
 Requirements
-------------
+------------------------
 
 FG Teefaa requires:
 
@@ -38,6 +38,10 @@ FG Teefaa requires:
 * Squashfs-tools (for creating snapshots of Operating System)
 * Bittorrent Sync (for high-speed multiple Baremetal Provisioning)
 * Torque Resource Manager (for scheduing Baremetal Provisioning)
+
+* System requirements
+  - pxeboot
+  - IPMI 
 
 
 Simple Design
@@ -64,6 +68,18 @@ Simple Design
 This structure enables a simple separation and concurrent development. Hence, users 
 can work on multile projects and multiple versions of teefaa. For example, 
 while one person is developing EXAMPLE, another person can start developing EXAMPLE2.
+
+Instalation
+------------------------
+
+The code can be downloaded from 
+
+* https://github.com/futuregrid/teefa
+
+The release version can be installed via::
+
+    pip install futuregird-teefaa
+
 
 Support
 -------
