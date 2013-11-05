@@ -16,7 +16,6 @@ Welcome to Cloudmesh Teefaa!
    :maxdepth: 2
 
    usersguide
-   modules
    adminguide
    license
 
