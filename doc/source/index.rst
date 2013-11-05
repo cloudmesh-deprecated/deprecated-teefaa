@@ -20,7 +20,7 @@ Welcome to Cloudmesh Teefaa!
    license
 
 
-Cloudmesh Teefaa is a set of deployment scripts for System Provisioning with 
+Cloudmesh Teefaa is a set of deployment scripts for system provisioning with 
 focus on  baremetal provisioning. It is designed to be simple, flexible, programable. 
 
 Requirements
@@ -44,9 +44,9 @@ Simple Design
 -------------
 
 * Scripts for handling Shell commands are written in Fabric and Cuisine.
-* Configuration files are written in YAML format. One of the goals of Teefaa 
-  is to make it understandable by reading the YAML files.
-* Each scripts has four types of directories as shown below. ::
+* Configuration files are written in YAML format, allowing the the configuration
+  files to be readable.
+* Each script is associated with four directories::
 
     |-- fabfile/EXAMPLE.py
     |-- ymlfile/EXAMPLE
@@ -61,14 +61,14 @@ Simple Design
                   |-- file1
                   `-- file2
 
-This stracture enables a simplified separation among concurrent developments, which allows 
-people to work on multile projects and multiple versions in a simple fashion. For example, 
+This structure enables a simple separation and concurrent development. Hence, users 
+can work on multile projects and multiple versions of teefaa. For example, 
 while one person is developing EXAMPLE, another person can start developing EXAMPLE2.
 
 Support
 -------
 
-If you run into problems when using this framework, please use our 
+If you run into problems, please use our 
 help form at `https://portal.futuregrid.org/help <https://portal.futuregrid.org/help>`_.
  
 Indices and tables
