@@ -21,16 +21,13 @@ Welcome to Cloudmesh Teefaa!
    license
 
 
-Cloudmesh Teefaa is a set of deployment scripts for System Provisioning(includes 
-Baremetal Provisioning). Which is designed as simple, flexible, programable and 
-collaboratable so that users/developers can build, test and appreciate new Open 
-Source Technologies as quickly as possible. So we hope that will happen to you soon.
-
+Cloudmesh Teefaa is a set of deployment scripts for System Provisioning with 
+focus on  baremetal provisioning. It is designed to be simple, flexible, programable. 
 
 Requirements
 ------------
 
-FG Teefaa requires(/thanks to):
+FG Teefaa requires:
 
 * Python, version 2.7
 * Python Modules
