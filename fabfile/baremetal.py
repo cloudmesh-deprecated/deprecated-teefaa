@@ -376,7 +376,7 @@ class BaremetalProvisioningRedHat6(BaremetalProvisioning):
         append(file, 'HOSTNAME=%s' % self.host['hostname'])
         append(file, 'NETWORKING=yes')
         # Update Network Interfaces
-        for iface in self.host['network'].keys():
+        for iface in self.host['network']:
             print "IFACE",iface
             if iface['name'] in ['bmc','pxe']:
                 pass
