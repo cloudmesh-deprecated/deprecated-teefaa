@@ -377,7 +377,6 @@ class BaremetalProvisioningRedHat6(BaremetalProvisioning):
         append(file, 'NETWORKING=yes')
         # Update Network Interfaces
         for iface in self.host['network']:
-            print "IFACE",iface
             if iface in ['bmc','pxe']:
                 pass
             else:
@@ -509,19 +508,22 @@ class BaremetalProvisioningUbuntu(BaremetalProvisioning):
         append(file, 'auto lo')
         append(file, 'iface lo inet loopback')
         for iface in self.host['network']:
-            iface_conf = self.host['network'][iface]
-            append(file, '# Interface %s' % iface)
-            append(file, 'auto %s' % iface)
-            append(file, 'iface %s inet %s' % (iface, iface_conf['bootproto']))
-            if iface_conf['bootproto'] == 'dhcp':
+            if iface in ['bmc','pxe', 'ib0']:
                 pass
-            elif iface_conf['bootproto'] == 'static':
-                append(file, 'address %s' % iface_conf['ipaddr'])
-                append(file, 'netmask %s' % iface_conf['netmask'])
-                if iface_conf['gateway']:
-                    append(file, 'gateway %s' % iface_conf['gateway'])
-                if iface_conf['nameserver']:
-                    append(file, 'dns-nameservers %s' % iface_conf['nameserver'])
+            else:
+                iface_conf = self.host['network'][iface]
+                append(file, '# Interface %s' % iface)
+                append(file, 'auto %s' % iface)
+                append(file, 'iface %s inet %s' % (iface, iface_conf['bootproto']))
+                if iface_conf['bootproto'] == 'dhcp':
+                    pass
+                elif iface_conf['bootproto'] == 'static':
+                    append(file, 'address %s' % iface_conf['ipaddr'])
+                    append(file, 'netmask %s' % iface_conf['netmask'])
+                    if iface_conf['gateway']:
+                        append(file, 'gateway %s' % iface_conf['gateway'])
+                    if iface_conf['nameserver']:
+                        append(file, 'dns-nameservers %s' % iface_conf['nameserver'])
         # Generate ssh host key if it doesn't exist.
         run('rm -f /mnt/etc/ssh/ssh_host_*')    
         run('ssh-keygen -t rsa -N "" -f /mnt/etc/ssh/ssh_host_rsa_key')
