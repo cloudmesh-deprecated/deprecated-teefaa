@@ -549,7 +549,8 @@ class BaremetalProvisioningUbuntu(BaremetalProvisioning):
             run('chroot /mnt chage -d 0 root')
         elif self.image['rootpass'] == "delete":
             run('chroot /mnt passwd --delete root')
-        run('chroot /mnt grub-install %s --recheck' % self.device)
+        device = self._check_if_hp_raid_controller()
+        run('chroot /mnt grub-install %s --recheck' % device)
         run('sync')
         run('reboot')
 
