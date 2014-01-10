@@ -1,0 +1,20 @@
+Metadata-Version: 1.0
+Name: teefaa
+Version: 0.3.1.a404.g44e4e4c
+Summary: FutureGrid: Creating a SLURM virtual Cluster via euca2tools
+Home-page: UNKNOWN
+Author: Koji Tanaka, Javier Diaz, Gregor von Laszewski
+Author-email: kj.tanaka@gmail.com
+License: Apache 2.0
+Description: Cloudmesh Teefaa
+        =================
+        
+        This project creates a virtual cluster with the help of euca
+        tools. The cluster uses SLURM as resource manager. A simple MPI
+        program is included to test the functionality. of teh virtual cluster.
+        
+        The project Documentation is located at http://cloudmesh.github.com/teefaa/
+        
+        
+Keywords: Cloudmesh Teefaa
+Platform: UNKNOWN

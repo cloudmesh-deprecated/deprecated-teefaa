@@ -1,0 +1,2431 @@
+commit 44e4e4c2f7635a67a2a8cba4bfe27920f0c92746
+Author: Gregor von Laszewski <laszewski@gmail.com>
+Date:   Tue Jul 16 13:50:13 2013 -0400
+
+    adding host lists to manage the hosts so we can do i[0-10]
+
+commit 60cc4a14f874dab4acc2111b1d662aa966d0532b
+Author: Gregor von Laszewski <laszewski@gmail.com>
+Date:   Tue Jul 16 13:49:39 2013 -0400
+
+    changing to setup.cfg
+
+commit 747c96226d1b4238c31f222a61be451b2456d5ea
+Author: Gregor von Laszewski <laszewski@gmail.com>
+Date:   Tue Jul 16 13:05:36 2013 -0400
+
+    removing duplicated license file
+
+commit 897d74bec1a9e8c232586e0b36055eee280b250e
+Author: Gregor von Laszewski <laszewski@gmail.com>
+Date:   Tue Jul 16 13:03:48 2013 -0400
+
+    changing to setup.cfg
+
+commit ff655b430dd93527cde4342b793c81564a5afd5d
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Tue Jul 16 12:00:03 2013 -0400
+
+    modify fabfile/futuregrid.py
+
+commit 2208ef909364d0b4ed28dced65c70ed933481ff1
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Tue Jul 16 11:58:19 2013 -0400
+
+    modify fabfile/futuregrid.py
+
+commit 2b31fae79dd8bd3a169689081e1a5075719d7ec3
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Tue Jul 16 11:52:29 2013 -0400
+
+    modify fabfile/futuregrid.py
+
+commit d9724126f27c21bb38f36eb2289b9f114ae43811
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Tue Jul 16 11:50:05 2013 -0400
+
+    modify fabfile/futuregrid.py
+
+commit 7974380a4088a848d5bb02c2e680fb4e5e587906
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Tue Jul 16 11:46:36 2013 -0400
+
+    modify fabfile/futuregrid.py
+
+commit 51c2d8ed6ebff5f4f89b0d9546cba6bf318f3eb7
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Tue Jul 16 11:40:02 2013 -0400
+
+    modify fabfile/futuregrid.py
+
+commit ac22a7311f9935867f4c7f662f42ccd0ccc0d5b9
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Tue Jul 16 11:39:23 2013 -0400
+
+    modify fabfile/futuregrid.py
+
+commit 3dc46d2bc87f92ebc4f8e7a8d5d07aac50d612d8
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Tue Jul 16 11:38:06 2013 -0400
+
+    modify fabfile/futuregrid.py
+
+commit 591a8dd9b1adeba594fd2ae64bc4423e6fe0a59e
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Tue Jul 16 11:36:34 2013 -0400
+
+    modify fabfile/futuregrid.py
+
+commit a339f26871ae0c616c90ba530969ed02d95644f5
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Tue Jul 16 11:35:16 2013 -0400
+
+    modify fabfile/futuregrid.py
+
+commit 131f8e448359369c97291e9250edb2793af92e33
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Tue Jul 16 11:32:51 2013 -0400
+
+    modify fabfile/futuregrid.py
+
+commit 40149afbf88e743c5424dc77bbb3bae3ccdb6290
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Tue Jul 16 11:32:19 2013 -0400
+
+    modify fabfile/futuregrid.py
+
+commit 1c6068972c41c59321aba50ed48767fd007ed878
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Tue Jul 16 11:31:33 2013 -0400
+
+    modify fabfile/futuregrid.py
+
+commit 4c54ae8f67ed47338715926cff27ff4435df92f4
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Tue Jul 16 11:30:23 2013 -0400
+
+    modify fabfile/futuregrid.py
+
+commit 0d11b483990c046f03c8a94fcae484830acd7940
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Tue Jul 16 11:29:37 2013 -0400
+
+    modify fabfile/futuregrid.py
+
+commit a2b238e2123a9d376f5fce6e43ad87f36563e487
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Tue Jul 16 11:25:04 2013 -0400
+
+    modify fabfile/futuregrid.py
+
+commit 9944106c1c61139e519831808543029b9ba1088d
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Tue Jul 16 11:22:19 2013 -0400
+
+    modify fabfile/futuregrid.py
+
+commit 32c82e1f608065c8c578e12bcc50a44715d31089
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Tue Jul 16 11:21:50 2013 -0400
+
+    modify fabfile/futuregrid.py
+
+commit 6a67266bde57b8cbb1e3d56759572f84b7b78f74
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Tue Jul 16 11:21:01 2013 -0400
+
+    modify fabfile/futuregrid.py
+
+commit 36aedefff27ab74bb6552eb831cf6b185c98291e
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Tue Jul 16 11:18:00 2013 -0400
+
+    modify fabfile/futuregrid.py
+
+commit ffa9738affdf933792d8ad984ccd5bdf086617d9
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Tue Jul 16 11:16:25 2013 -0400
+
+    modify fabfile/futuregrid.py
+
+commit 87b8c24ddbefe733efab879095b696fc72992dc6
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Tue Jul 16 11:12:59 2013 -0400
+
+    modify fabfile/futuregrid.py
+
+commit af3f04d4114bcdf2ff59e1cf0d1475922537b9b2
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Tue Jul 16 11:06:44 2013 -0400
+
+    modify fabfile/futuregrid.py
+
+commit f29b5274436f4483bfdcf6d16ae177e5e5488edb
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Tue Jul 16 11:03:05 2013 -0400
+
+    modify fabfile/futuregrid.py
+
+commit ddac58fea243bd80e56b3ebc604edae46a83c928
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Tue Jul 16 11:01:45 2013 -0400
+
+    modify fabfile/futuregrid.py
+
+commit 3d833450d43627f34cb08d2256fb0f48ee1cd3a9
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Tue Jul 16 10:51:13 2013 -0400
+
+    modify fabfile/futuregrid.py
+
+commit 846e4f0a935dfed4b7158119c594f0bbd1ee6df9
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Tue Jul 16 10:45:27 2013 -0400
+
+    modify fabfile/futuregrid.py
+
+commit 455c02b232f4994603ad9ce7553bc99690edbcc3
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Tue Jul 16 10:41:10 2013 -0400
+
+    modify fabfile/futuregrid.py
+
+commit a6a3ea2e38992b96df7ea4e8f8ba54f8925467b4
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Tue Jul 16 10:37:04 2013 -0400
+
+    modify fabfile/futuregrid.py
+
+commit 168ba4fa53cd73780057133048ccb8e02f4f3dd0
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Tue Jul 16 10:36:07 2013 -0400
+
+    modify fabfile/futuregrid.py
+
+commit 59512402a8ebd7b04dde7a4f407e7188097c07ef
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Tue Jul 16 10:28:19 2013 -0400
+
+    modify fabfile/futuregrid.py
+
+commit 5a7e89e697d66c77c3b2a4b1787f2e5f9a5db341
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Tue Jul 16 10:26:04 2013 -0400
+
+    modify fabfile/futuregrid.py
+
+commit 331787bcad7eee28b5fcbe4b842d283c7837da4b
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Tue Jul 16 10:24:25 2013 -0400
+
+    modify fabfile/futuregrid.py
+
+commit 55b915b17d273f1a993e0e23452ffc8467deaad0
+Merge: 41c6109 3aa4206
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Tue Jul 16 10:23:06 2013 -0400
+
+    Merge branch 'master' of github.com:cloudmesh/teefaa
+
+commit 41c6109a745943aec786f49e0947a9535d532aaf
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Tue Jul 16 10:22:58 2013 -0400
+
+    modify fabfile/futuregrid.py
+
+commit 3aa42067e25eff8f63fe44aabaff96462f02db79
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Sun Jul 14 18:46:39 2013 -0400
+
+    modify setup.py and api
+
+commit 85be27d924f02ca26c188a3eefa6c037c5c6fb93
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jul 10 20:24:46 2013 -0400
+
+    modify fabfile/baremetal.py
+
+commit b231321efaf21007ce6a343f148cac119ac3d9de
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jul 10 16:32:35 2013 -0400
+
+    modify fabfile/baremetal.py
+
+commit a0398bb264e58f542c285ad92602a617a1e4349c
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jul 10 16:10:31 2013 -0400
+
+    modify src/teefaa/baremetal_provisioning.py
+
+commit 5a6fcb928a98d1b97f6cbd0032b4467311447e5b
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jul 10 15:52:43 2013 -0400
+
+    modify src/teefaa/baremetal_provisioning.py
+
+commit e19d77dff119890873c97664bc8441941c9d633e
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jul 10 15:38:59 2013 -0400
+
+    modify src/teefaa/baremetal_provisioning.py
+
+commit 0eccec060f5e4a20b79b6a50511628b0ffa3a74f
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jul 10 15:29:11 2013 -0400
+
+    modify src/teefaa/baremetal_provisioning.py
+
+commit 0b68b44807c68ed45af2af2ac0b731cbcf547968
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jul 10 15:28:22 2013 -0400
+
+    modify src/teefaa/baremetal_provisioning.py
+
+commit d60614248fdecc61f22cff244c376a434cd0f254
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jul 10 15:22:39 2013 -0400
+
+    modify src/teefaa/baremetal_provisioning.py
+
+commit b49a1bb14ce4a9f565e9d363ab45f2f3f2b91545
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jul 10 15:21:11 2013 -0400
+
+    modify src/teefaa/baremetal_provisioning.py
+
+commit b4e82a09c8b56252a6438c5d08520e0fcdbf4a49
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jul 10 15:20:26 2013 -0400
+
+    modify src/teefaa/baremetal_provisioning.py
+
+commit fc435254a9e9ba08dbe5f0e50eed568a125a84e2
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jul 10 15:17:48 2013 -0400
+
+    modify src/teefaa/baremetal_provisioning.py
+
+commit 07ea8b0abd667dbcbe750597a698d87b388c6434
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jul 10 15:16:30 2013 -0400
+
+    modify src/teefaa/baremetal_provisioning.py
+
+commit bb186825ebcfcc51c74782f62e1ad3aa730ff2cc
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jul 10 15:15:59 2013 -0400
+
+    modify src/teefaa/baremetal_provisioning.py
+
+commit 8a76eeaadbceb126f0268f07e03f254a7ce2cc02
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jul 10 15:15:01 2013 -0400
+
+    modify src/teefaa/baremetal_provisioning.py
+
+commit 6b19bb1deb8df10da73a6d2fc93e7c7b69d78c4f
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jul 10 15:09:06 2013 -0400
+
+    modify src/teefaa/baremetal_provisioning.py
+
+commit 17499bb67a4ee0265e5e632261bc3df9f0e9f890
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jul 10 15:06:55 2013 -0400
+
+    modify src/teefaa/baremetal_provisioning.py
+
+commit 42f621dfe69b98ac5998099c2791520bc75ee3cf
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jul 10 14:50:32 2013 -0400
+
+    update
+
+commit a7698370dca3a9c7792b021ce5b9c63058512059
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Fri Jul 5 15:31:49 2013 -0400
+
+    change from hosts.yml,images.yml to hosts/hostname.yml,images/image.yml
+
+commit f97dd758b3bb70b3770ef4839907d04e8f59c769
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Jul 1 14:40:12 2013 -0400
+
+    add requirements.txt
+
+commit d7764bc73b3d17b02d1cb388d076c2c8cd39933e
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Jul 1 12:05:43 2013 -0400
+
+    add share/baremetal/boot/grub/grub.conf.redhat5.xen
+
+commit 07af582349b8a6f04608da8281e3cfcd30f28904
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Jul 1 12:02:41 2013 -0400
+
+    fix bugs for redhat5
+
+commit 932325eb7b627d9db89de4da076e084f6b410b4b
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Sun Jun 30 13:38:36 2013 -0400
+
+    add append fstab
+
+commit ac14268e11ec4e5be863ba01b651919095e6cf18
+Author: Fugang Wang <kevinwangfg@gmail.com>
+Date:   Fri Jun 28 12:40:53 2013 -0400
+
+    fix Makefile to have the new repo base
+
+commit 1cec809d7eb9f60867f320b0d8a614b22810eed0
+Author: Fugang Wang <kevinwangfg@gmail.com>
+Date:   Fri Jun 28 12:36:34 2013 -0400
+
+    fix Makefilw to have the new repo base
+
+commit d5c612a7b4eb2c8f3416475e0264054d0058b277
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Fri Jun 28 11:22:34 2013 -0400
+
+    update baremetal.rst
+
+commit b9b95c036d7418f1f8b937cfaedee93d226a3c83
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Fri Jun 28 11:21:24 2013 -0400
+
+    update baremetal.rst
+
+commit cc1a6b1ac1827de0255e99a3b14ef15415673d74
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Fri Jun 28 11:17:39 2013 -0400
+
+    update baremetal.rst
+
+commit e015be86bcd43b5a4376dcfbe45cb4d23744a867
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Fri Jun 28 11:14:43 2013 -0400
+
+    update baremetal.rst
+
+commit ba6faf68de31c62d3acb24fcb1f6bfaffd47d42f
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Fri Jun 28 11:06:42 2013 -0400
+
+    update
+
+commit c0f338f8ab60121d1f5548bad96ec6831e4766b7
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Fri Jun 28 10:59:55 2013 -0400
+
+    update baremetal.rst
+
+commit 3f49dd874224971a85429d1114d5f0e01efc11bd
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Fri Jun 28 09:57:08 2013 -0400
+
+    update
+
+commit 58cfa8801db9bed376bbf0e3718b7eb2c4eec7ec
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Fri Jun 28 09:53:50 2013 -0400
+
+    update baremetal.rst
+
+commit 2b0bd802878ac0188c18028fbc05bb51023ff286
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Fri Jun 28 09:49:14 2013 -0400
+
+    start page baremetal.rst
+
+commit 3024cbbf448ea95c39c28d2934c37b2d037a738f
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Fri Jun 28 09:37:39 2013 -0400
+
+    modify index.rst
+
+commit 273a98556f80150ac517a0479fabd778e4f2a312
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Thu Jun 27 16:05:21 2013 -0400
+
+    make setup.py ready.
+
+commit f1f92239fb2cccca52f164207684a419da1512cd
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Thu Jun 27 16:05:15 2013 -0400
+
+    make setup.py ready.
+
+commit 8c4e593458e229a792f71d27f598902c2d2e3d64
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Thu Jun 27 14:57:51 2013 -0400
+
+    delete scratch
+
+commit 1a718da5ace28daa071890f00109567c473e2dd2
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Thu Jun 27 14:19:28 2013 -0400
+
+    tets
+
+commit 3298b0c79868d57a978e15e68fcb2c9358e7db6a
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Thu Jun 27 13:50:06 2013 -0400
+
+    change name from baremetal.osprovisioning to baremetal.provisioning
+
+commit f9b0d75dca7b6ad71c0c340d9f5ccc8cb9700a3e
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Thu Jun 27 13:41:33 2013 -0400
+
+    change the name scratch to baremetal
+
+commit 081f01c6545061a1ccd4847e2a5f907dbd79e26e
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Jun 24 17:22:23 2013 -0400
+
+    start working torque.py
+
+commit 9195278c43df63eb5755518327d6e233d1107bde
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Jun 24 17:05:40 2013 -0400
+
+    start working torque.py
+
+commit 01047460fa43347e7200e32a695932e48e02022e
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Jun 24 17:02:18 2013 -0400
+
+    start working torque.py
+
+commit 11287b17191cf983e154b30851b22457135f6656
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Jun 24 16:56:50 2013 -0400
+
+    start working torque.py
+
+commit e5c4268ad8c43ed011ed65793056881d5f30c826
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Jun 24 16:49:26 2013 -0400
+
+    start working torque.py
+
+commit a48fd9cec7d3fdcd9ab31fd09387990e38770efb
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Jun 24 16:40:31 2013 -0400
+
+    start working torque.py
+
+commit 4b081e29e81b859c20f9c810bc1be94b8a60ad39
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Jun 24 16:38:09 2013 -0400
+
+    start working torque.py
+
+commit fdbce0fc99b807ce95a62ff8ebe3f7b86e00e33e
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Jun 24 16:35:36 2013 -0400
+
+    start working torque.py
+
+commit 77c968d3897efc02553d2fdb4f73c07b803d5ccf
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Jun 24 16:28:44 2013 -0400
+
+    start working torque.py
+
+commit b34321f4ef4544ce8582b2386582072a9b6d301f
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Jun 24 16:24:03 2013 -0400
+
+    start working torque.py
+
+commit 3fb5c4ddcdd583a97b450d5e8af0e8a72c18b6f3
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Jun 24 16:18:46 2013 -0400
+
+    start working torque.py
+
+commit 27c2a10efbfb7b2e6cd8e1d281aa595d5c9114bc
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Jun 24 16:15:26 2013 -0400
+
+    start working torque.py
+
+commit a7338864e6f67c8eaa480f451471bc3d49fe90c1
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Jun 24 16:14:23 2013 -0400
+
+    start working torque.py
+
+commit 10af1ba3ba0c25a9d3a48c65f37a3f2c58b0b610
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Jun 24 16:13:29 2013 -0400
+
+    start working torque.py
+
+commit 933c4fe6b084fc852c1f98567f3b32da93979021
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Jun 24 16:11:24 2013 -0400
+
+    start working torque.py
+
+commit e4aa821dc26f6920267c0362676a0fcd2b7a72a2
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Jun 24 16:10:09 2013 -0400
+
+    start working torque.py
+
+commit f391944ca9edbdbce5ac3a79b7d002ebd6a1cba5
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Jun 24 16:09:01 2013 -0400
+
+    start working torque.py
+
+commit 6ef1ced767811284f58f611a79f66b2505aee42c
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Jun 24 16:08:13 2013 -0400
+
+    start working torque.py
+
+commit 3aa54e9f9c9cbd2054e89133258b0827ca6b12a2
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Jun 24 15:59:43 2013 -0400
+
+    start working torque.py
+
+commit 92da8ce21a5bf91026e8eefdf2c8cf8b146176e4
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Jun 24 15:57:10 2013 -0400
+
+    start working torque.py
+
+commit 9e79363732deb67c1091d57128e451459e869299
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Jun 24 12:13:29 2013 -0400
+
+    add grub.conf.redhat6
+
+commit 3ca106771770b45a5fbfda49379e26451f2e4b29
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Jun 24 11:19:51 2013 -0400
+
+    add class and osprovisioning
+
+commit ddf0f542176dd601b8801030a1c595602ca022c9
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Sun Jun 23 00:21:58 2013 -0400
+
+    Change FutureGrid -> Cloudmesh
+
+commit 5c1f1250d8d3631f17c6a4279ba9da5199deeedf
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Sun Jun 23 00:15:45 2013 -0400
+
+    make it a little better with using class
+
+commit 4f067bb94fb21217ed2ccac33129b94619b9fddd
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Sat Jun 22 20:39:03 2013 -0400
+
+    update
+
+commit efd4a3487501de28975530fd43a506b88d7375c2
+Merge: 120e651 4ccf4a0
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Thu Jun 20 17:28:38 2013 -0400
+
+    update
+
+commit 4ccf4a086b65367bf5369c4b1fa9b8b856d78c09
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Thu Jun 20 11:48:17 2013 -0400
+
+    update
+
+commit d0861f910f98617174f26ab1a4557aad8dd5484a
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Thu Jun 20 11:08:09 2013 -0400
+
+    update
+
+commit da361da5af8a8c7a4886eee6fdfba927c0ba35a8
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Thu Jun 20 00:27:45 2013 -0400
+
+    add tmp_ifconfig()
+
+commit b6d13a390a83c0746b8d1da7a2a28726b71d9b93
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Thu Jun 20 00:22:08 2013 -0400
+
+    add tmp_ifconfig()
+
+commit e02c21c878f8dfb235ecfb3d9e857fea03d53d74
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Thu Jun 20 00:07:59 2013 -0400
+
+    change share/module to share_dir()
+
+commit 47084d9d16d5e9d96c75a54aae266671b4280125
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jun 19 23:47:39 2013 -0400
+
+    replace fabfile -> ymlfile and remove .py and .pyc with single line
+
+commit 85d8824defd87407148d89cc85aad5fc2cf514c4
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jun 19 23:45:46 2013 -0400
+
+    update
+
+commit 3fe928db7abf4088f872dfe0df8b0088d3d254ed
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jun 19 23:43:34 2013 -0400
+
+    update
+
+commit b6bb58720159f3bf707ce71a5b1c7fe013ff1558
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jun 19 23:42:59 2013 -0400
+
+    update
+
+commit f79e0fbebb5add367a77d52d9215347a644c1e4c
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jun 19 23:41:41 2013 -0400
+
+    update
+
+commit 7667b57f90ae44aae632a3d473fc8491387bf9d9
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jun 19 23:37:55 2013 -0400
+
+    update
+
+commit 7ebde273a1c90cef84fc56726c181a141f6bfea3
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jun 19 23:29:00 2013 -0400
+
+    update
+
+commit 6a03eba7b9859bbe04045defb0e8fae01a5b3146
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jun 19 23:26:46 2013 -0400
+
+    update
+
+commit 03a532e17bb8b420e8c4d0be99995a5b4e24068b
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jun 19 23:20:07 2013 -0400
+
+    update
+
+commit 6e47220606b92c3dcd64ba2cfa69ba0c624e8dcb
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jun 19 23:18:17 2013 -0400
+
+    update
+
+commit f5dc8ce362ddd7c5ba6e1e858937339965b82823
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jun 19 23:16:02 2013 -0400
+
+    update
+
+commit 567e3d12a89e449817cbbde2dd4f219b9a2b0db1
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jun 19 22:46:53 2013 -0400
+
+    testing path
+
+commit 1c91366eac888cbe2406259b302f98cadf8ef9b7
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jun 19 22:38:40 2013 -0400
+
+    testing path
+
+commit d40676dd4b55f87df64ad32bf1ed0171b4b03cc7
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jun 19 22:33:56 2013 -0400
+
+    testing path
+
+commit 5a99cf0ca4ccd85d2d2661fef106e6bda05be5e2
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jun 19 22:31:28 2013 -0400
+
+    testing path
+
+commit b156bdf5f43041cf1b332cb840c51c35290c311b
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jun 19 22:30:55 2013 -0400
+
+    testing path
+
+commit e6d6b30f1f68c1508b48d1fb6ad0d1addc06d232
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jun 19 22:24:38 2013 -0400
+
+    testing path
+
+commit c603a7114a9626aae0a584f11a5d42a988af4bb5
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jun 19 22:22:10 2013 -0400
+
+    testing path
+
+commit b9816b8e36a8fe5466c69051a12f66990d3faeba
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jun 19 22:20:24 2013 -0400
+
+    testing path
+
+commit 71a6a2be2bcc6f61d024105e92d6b1b6fac52670
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jun 19 22:16:54 2013 -0400
+
+    testing path
+
+commit 741d5fff728c56bf666c95bd46d3b93f16161c91
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jun 19 22:15:24 2013 -0400
+
+    testing path
+
+commit f19575d84c7f33be5c26fe34b39682f329e25a32
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jun 19 22:11:30 2013 -0400
+
+    update system.pxeboot
+
+commit 3d60c72a13fb94769cc6ef1a970d41e667b9815c
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jun 19 22:03:21 2013 -0400
+
+    update system.pxeboot
+
+commit f2ec90adfb9f03ad518132232638e5cfd77b2801
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jun 19 19:25:29 2013 -0400
+
+    update system.pxeboot
+
+commit 504885e3777a1e20d29f21276cf35220a4a68cb4
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jun 19 19:24:01 2013 -0400
+
+    update system.pxeboot
+
+commit cab8d2e991f1a2b9939b767c50f6afb09a40c192
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jun 19 19:21:36 2013 -0400
+
+    update system.pxeboot
+
+commit e4053fcee58b0007d6de2812121e5313fcc8f2a1
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jun 19 19:11:12 2013 -0400
+
+    update system.pxeboot_list
+
+commit 9118a03d7694d324bbe2c9f2f4763fea061d4b5a
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jun 19 19:09:14 2013 -0400
+
+    update scratch
+
+commit 120e651a2fc15b2709a2222916f7314be7acccd0
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jun 19 19:08:17 2013 -0400
+
+    update scratch
+
+commit 7a717ba5455469776f297e8e82208ca1cb993921
+Merge: 4e7f488 8e7f690
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jun 19 19:02:58 2013 -0400
+
+    Merge branch 'master' of github.com:futuregrid/teefaa
+
+commit 4e7f488173eb520107cca08d9d5cb3180e4b6596
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jun 19 19:02:37 2013 -0400
+
+    update
+
+commit 81fbebdccb3dfb03f388c170d3b49c3bcebc8ff1
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jun 19 19:02:05 2013 -0400
+
+    add doc of system module
+
+commit def9abb5fe50a755a128b97f02ccc75dc981654a
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jun 19 18:21:05 2013 -0400
+
+    add system.temperture
+
+commit f90befc506debd709b5c8f844d5ee12fd35eedc8
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jun 19 15:41:21 2013 -0400
+
+    decolate output of pxeboot,power
+
+commit c9b25e7068fa75f5c0db1638bd75caf43cea4671
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jun 19 15:40:09 2013 -0400
+
+    decolate output of pxeboot,power
+
+commit 9d5e57a12f498afe2e1c4a13d2f995154663a82d
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jun 19 15:37:03 2013 -0400
+
+    decolate output of pxeboot,power
+
+commit 56073d330478cd0ff3eb3ef641189cba325dc9f8
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jun 19 15:31:36 2013 -0400
+
+    add hostname on system.pxeboot:node,show
+
+commit f500d85fce3c933e4c9f48d8a0d98d5b17814fc2
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jun 19 15:27:27 2013 -0400
+
+    hide run() on system.pxeboot:node,show
+
+commit 8e7f6908a4699e2edfbb3ebd0e1fa0127319b3a6
+Merge: f8761a5 aeea739
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jun 19 14:40:08 2013 -0400
+
+    marge dev
+
+commit aeea7395606af44d7f860bcfc28a55772b276232
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jun 19 14:22:36 2013 -0400
+
+    update scratch
+
+commit ed80d157858ca1302a5a8b1cd06ce4a4c8086e6d
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jun 19 12:48:53 2013 -0400
+
+    add if statments in system.pxeboot for avoiding a problem when files do not exist.
+
+commit c492a78da9fed392d21670d9e98d20075f68fe6e
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jun 19 12:43:59 2013 -0400
+
+    add if statments in system.pxeboot for avoiding a problem when files do not exist.
+
+commit db5877a081b78edfdab3f646e5c4d33e2214a216
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jun 19 12:40:58 2013 -0400
+
+    add if statments in system.pxeboot for avoiding a problem when files do not exist.
+
+commit ce30c20b0ab37de48c3ad8e65ea1c285a0f174a8
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Tue Jun 18 23:08:54 2013 -0400
+
+    fix install_parallel
+
+commit 2c3f806bae484034c5abed6053b480056a64e47b
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Tue Jun 18 23:04:18 2013 -0400
+
+    adde install_parallel
+
+commit e18e1a5a1aefc18969259a0b783bbdaf64a0a213
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Tue Jun 18 23:00:38 2013 -0400
+
+    adde install_parallel
+
+commit 0a8dc583a323f7b8bec90df2db4f9ef6964554b5
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Tue Jun 18 09:19:20 2013 -0400
+
+    hostname --> node
+
+commit b5bae72f0592f5011c5f7f6447a54beb275da2a1
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Tue Jun 18 09:18:10 2013 -0400
+
+    add hostname
+
+commit bb87ab1c807657ca4c50deb332568ce9d6cafa0f
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Tue Jun 18 09:14:48 2013 -0400
+
+    hide running std_out
+
+commit 3b799fa000157869aabb0b8d4b34b1be5b3310c0
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Tue Jun 18 09:09:44 2013 -0400
+
+    test hideoutput
+
+commit f8761a51193e7482df6b71e06cfdc2230cf77e20
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Tue Jun 18 01:03:28 2013 -0400
+
+    update docs
+
+commit a6ae2541eaeb3ac54f43f90de7d1a0fe1f321859
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Tue Jun 18 00:05:47 2013 -0400
+
+    teefaa.py --> scratch.py
+
+commit 4928bef06570a144079e64ae1db82c44d97b5a2e
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Jun 17 23:31:03 2013 -0400
+
+    fix teefaa.py
+
+commit 2cc5f94c94a3001eec1c82bdf5d75f0706928d7b
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Jun 17 23:27:31 2013 -0400
+
+    fix teefaa.py
+
+commit de0724287339e7b869dcddf1d2f01c834d847c47
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Jun 17 23:18:16 2013 -0400
+
+    fix teefaa.py
+
+commit b1b38ee287f24755d45d3aaa006169cf48a47ba6
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Jun 17 23:09:05 2013 -0400
+
+    add share/teefaa
+
+commit 8f5a3df05681964b765b564ffb1ceebe78df7187
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Jun 17 21:50:23 2013 -0400
+
+    ipmi_status --> power
+
+commit 01a2c79d376e9ead8cb622a10d107ad46715aa8c
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Jun 17 21:46:53 2013 -0400
+
+    change on pxeboot()
+
+commit 950f0e5248e50fe0cbcd8f61a0380624e7ac44c5
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Jun 17 21:44:19 2013 -0400
+
+    change on pxeboot()
+
+commit 39ba757bfe9560de0e320332798726c05aa2b396
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Jun 17 21:43:22 2013 -0400
+
+    change on pxeboot()
+
+commit 04ea73a7cca24828515b848eef5d52a86ae093c1
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Jun 17 21:34:33 2013 -0400
+
+    change on pxeboot()
+
+commit 2ac8df9cafeeee9b6aebc9de43e244a1dfef511d
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Jun 17 21:16:29 2013 -0400
+
+    ipmi_power -> power_status
+
+commit ea208f375c000a52250671ab3c46baef6503577e
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Jun 17 21:15:40 2013 -0400
+
+    ipmi_power -> power_status
+
+commit 1dc5dc06a9ab31c309526814b82dea05f9c53369
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Jun 17 21:07:28 2013 -0400
+
+    update
+
+commit 52ba2e933f68f668daaa2a1fb323c50b4ca94fdd
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Jun 17 16:57:24 2013 -0400
+
+    fix output of system.ipmi_power
+
+commit a8c902ad4f44e7758a5ff355d37d3ec1eac8ee98
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Jun 17 16:55:34 2013 -0400
+
+    add system.ipmi_power
+
+commit 50c7689a8f4982c258da4dc9ffeba9855667058f
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Jun 17 16:53:53 2013 -0400
+
+    add system.ipmi_power
+
+commit b9c3f64bfd2d7f1d0614e933c20282ab032ca147
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Jun 17 16:42:35 2013 -0400
+
+    add ipmitool.yml-example
+
+commit e8b8e3926b492ae35982bb9a5dd290f7bb5ce690
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Jun 17 15:51:16 2013 -0400
+
+    add system.pxeboot_list
+
+commit dd71eff4d9bcd526c46b38da99156a163e4fb639
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Jun 17 15:50:15 2013 -0400
+
+    add system.pxeboot_list
+
+commit a122823727d26f0b29e45fb03f2a444f77c58edb
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Jun 17 15:42:43 2013 -0400
+
+    local --> run, system.pxeboot
+
+commit 0b91f1379a4fa618ad39dfdf671b69c1746ce932
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Jun 17 15:38:55 2013 -0400
+
+    add pxecfg.yml-example
+
+commit 446c3754fcb16e60a6ded49c033502d377110a47
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Jun 17 15:37:47 2013 -0400
+
+    add system.pxeboot
+
+commit 161de06899baa6d8070314bee17e2a88125abb11
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Jun 17 14:28:41 2013 -0400
+
+    update
+
+commit 0b93f45668803616d72591605d13f8efecb7d337
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Jun 17 13:58:23 2013 -0400
+
+    update
+
+commit 4fc2c43ae356d7cf9e08c16e3b242fa7ca1705a2
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Jun 17 12:21:16 2013 -0400
+
+    update index.rst
+
+commit 39ba676cb3c9af04c0be58075d95163b9e1f38c6
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Jun 17 12:18:02 2013 -0400
+
+    update index.rst
+
+commit 7c0dcbde107667f936129a55a5a102a15dc16170
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Jun 17 12:14:32 2013 -0400
+
+    update index.rst
+
+commit 792a7fd5774257af0d68ccf8bbdbe48dd52726eb
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Jun 17 12:08:29 2013 -0400
+
+    update usersguide.rst
+
+commit 9df9da4cd3be0ed8185d6c5e8f8a9ba1bcad12ed
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Jun 17 12:04:02 2013 -0400
+
+    fix index.rst
+
+commit 334a9e0e4ff2969d871c6f59ad6a964d8f8086cc
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Jun 17 12:01:33 2013 -0400
+
+    fix index.rst
+
+commit 538e7e7151a0b5f8ab29afeeeddc2f73fdf17d3c
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Jun 17 12:00:15 2013 -0400
+
+    fix index.rst
+
+commit a6ebb8edbddae5b90871f8dea6c60bf3fda22c37
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Jun 17 11:56:50 2013 -0400
+
+    fix index.rst
+
+commit 07463da7e07f65d5b18d136bddde399c16bf7d58
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Jun 17 11:47:37 2013 -0400
+
+    start updating document
+
+commit c6789d4e52a728debf99f02f406b4aa6cefb8c92
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Sun Jun 16 17:04:44 2013 -0400
+
+    fix .ssh/authorized_keys: No such file or directory
+
+commit 29d074f7730c67d1925c78c0525ace8bb6610ed5
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Sun Jun 16 17:04:13 2013 -0400
+
+    fix .ssh/authorized_keys: No such file or directory
+
+commit 0ea3dd1ea4fa6722dfb5dd70b12cf5b78cec134a
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Sun Jun 16 16:59:48 2013 -0400
+
+    fix .ssh/authorized_keys: No such file or directory
+
+commit 81f314abac91cfe064c2b3657a0e1ee1007bc2eb
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Sun Jun 16 16:59:05 2013 -0400
+
+    fix .ssh/authorized_keys: No such file or directory
+
+commit 43e1d7b11a2384ba099410ea43bb9311fdb68bed
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Sun Jun 16 16:52:50 2013 -0400
+
+    fix .ssh/authorized_keys: No such file or directory
+
+commit 87c85901d947fb4c29960c708e6fe13b13dd54c6
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Sun Jun 16 16:51:58 2013 -0400
+
+    fix .ssh/authorized_keys: No such file or directory
+
+commit 82d50fb17520705b0ad75e5546f08e2c1780893e
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Sun Jun 16 16:04:56 2013 -0400
+
+    merge dev version
+
+commit 21f7d44ca0700b28d4c87231fec2cd5cb2d615d1
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Sun Jun 16 15:08:49 2013 -0400
+
+    made minor changes
+
+commit 4ce886d724c28d6a2da84b8e1c943e63cd728870
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Sun Jun 16 02:43:30 2013 -0400
+
+    del *.yml
+
+commit b675875e3718b78d7b89d224d80c80339a26cfda
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Sun Jun 16 02:37:06 2013 -0400
+
+    add system.users_ensure
+
+commit 357db3fc3414538a0b89dcf3e594ff8f6c346f49
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Sat Jun 15 12:38:03 2013 -0400
+
+    add some minor changes
+
+commit 6f2333dba60665c2e5e02fbcfe7e6d0a8ee82996
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Sat Jun 15 02:40:11 2013 -0400
+
+    add if not yml file exists
+
+commit b8088da2a51e4e6f9eb83f0c63a5c02332e2eca7
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Fri Jun 14 23:33:38 2013 -0400
+
+    update system.backup_list
+
+commit fdd34f4d6bc9aa879c5e149868522375eaf391cf
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Fri Jun 14 23:33:00 2013 -0400
+
+    update system.backup_list
+
+commit 2fd62bc37a0012a78724d1bb9fb7048da3159850
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Fri Jun 14 23:25:01 2013 -0400
+
+    add system.backup_list
+
+commit cca243bd342b25ca3abba2461d88e8cc0b0ca02e
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Fri Jun 14 23:13:54 2013 -0400
+
+    update fabfile/system.py
+
+commit e2ac737de178762fe03e7b855ea3287c1c2ffc45
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Fri Jun 14 18:26:05 2013 -0400
+
+    testing fabfile/system.py
+
+commit 861f3d73dfe62a73b3b178ac4ca935b2814ae978
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Fri Jun 14 18:17:35 2013 -0400
+
+    testing fabfile/system.py
+
+commit 7e9f0eb40da36b34e5650a5160520a864557f921
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Fri Jun 14 18:11:52 2013 -0400
+
+    testing fabfile/system.py
+
+commit b99300d79fcdefa42e48ef24a10ab20dbd406cc1
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Fri Jun 14 18:08:16 2013 -0400
+
+    testing fabfile/system.py
+
+commit ae9b1e2485df6e539842587772c85e17c82a6833
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Fri Jun 14 18:07:38 2013 -0400
+
+    testing fabfile/system.py
+
+commit 2478498949e533a6411cbd1099fb49be16275823
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Fri Jun 14 18:06:24 2013 -0400
+
+    testing fabfile/system.py
+
+commit 2e5467daed06f721d4af480d5efd6e17f7c236d8
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Fri Jun 14 18:03:16 2013 -0400
+
+    testing fabfile/system.py
+
+commit dde842a23994fbb23aee3298e8a152fa485f820b
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Fri Jun 14 17:43:53 2013 -0400
+
+    testing fabfile/system.py
+
+commit 5a46a076b3771b42596025a2e91d2ff524fd5da4
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Fri Jun 14 17:42:05 2013 -0400
+
+    testing fabfile/system.py
+
+commit ba20fd5cb4252037ebfa647a2ee15f9c57ff114c
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Fri Jun 14 17:41:08 2013 -0400
+
+    testing fabfile/system.py
+
+commit e4beab8892911467f21418a5f9ec00210461c7a2
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Fri Jun 14 16:26:18 2013 -0400
+
+    clean files
+
+commit 4cdc3cca5c1bca152e9e6d244a6e5c3efd012349
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Fri Jun 14 16:20:28 2013 -0400
+
+    add ymlfile/system/backup.yml-example
+
+commit 7bef535decd71f32139354c6351083dc86ad3020
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Fri Jun 14 12:58:23 2013 -0400
+
+    better tfutils.install_pdsh
+
+commit 4413528c82e1d742203acbef46cabd463ccc42aa
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Fri Jun 14 12:56:17 2013 -0400
+
+    en multi opsys tfutils.install_pdsh
+
+commit 6d5aff67f30d6c15908d31c82a1988b6116f3c7a
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Fri Jun 14 12:39:27 2013 -0400
+
+    testing centos tfutils.en_root_login
+
+commit a03ec574d5b91aef211fb4f6163d0e1fe445b002
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Fri Jun 14 12:34:51 2013 -0400
+
+    fix tfutils.en_root_login
+
+commit a095e16c3bcbc5a5a2d93ec69ac7388b12b97219
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Fri Jun 14 12:27:47 2013 -0400
+
+    fix tfutils.en_root_login
+
+commit 1ba670f23053e9ea15cb39dfa24fa33688944925
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Fri Jun 14 12:24:57 2013 -0400
+
+    add tfutils.en_root_login
+
+commit c3844e8a0a0290a2b53b43aca4f6553b008ab363
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Fri Jun 14 11:28:28 2013 -0400
+
+    add tfutils
+
+commit ff25ead1cf3fbfb032c3557d5b61193af0514800
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Fri Jun 14 10:41:00 2013 -0400
+
+    add examples in ymlfile/teefaa/
+
+commit 2d0063fa635288b9e2ba45427222c833e57ecc64
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Thu Jun 13 12:01:54 2013 -0400
+
+    update
+
+commit a86db69bb89292c7b18c6336817a90e269ad71d1
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Tue Jun 11 11:22:59 2013 -0400
+
+    start dev
+
+commit 151272ab7e147a21879894fa7e69baf5f149e74f
+Author: Gregor von Laszewski <laszewski@gmail.com>
+Date:   Tue Mar 5 22:53:42 2013 -0500
+
+    totally reorganizing the documentation, switching to better bootstarp, fixing some obvious spelling errors
+
+commit 8b4635cb1e7c60102238f5a927ec8621afd8af91
+Author: Gregor von Laszewski <laszewski@gmail.com>
+Date:   Tue Mar 5 13:55:39 2013 -0500
+
+    cirrecting spelling error
+
+commit 102b9602e82f6605401ba8fc25b89c8715e3bc44
+Author: Gregor von Laszewski <laszewski@gmail.com>
+Date:   Tue Mar 5 13:52:24 2013 -0500
+
+    activating the bootstrap theme
+
+commit 61d6129dd85421078badcaa40d01af89aff609e0
+Author: Gregor von Laszewski <laszewski@gmail.com>
+Date:   Tue Mar 5 13:37:14 2013 -0500
+
+    preparing the bootstarp
+
+commit 8d097de488a3db69e34fc5e681072524c47fef3b
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Mar 4 13:46:51 2013 -0500
+
+    update
+
+commit 6bfb6c68ac27020d3c69413d25ae64dbb45397c9
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Mar 4 13:44:28 2013 -0500
+
+    update
+
+commit 100f43cf0570d9ba0cd887e849268b83631b308e
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Mar 4 12:00:21 2013 -0500
+
+    switch to python
+
+commit 04488a6c521deba87a174956eeade4e580d7b850
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Feb 11 11:22:47 2013 -0500
+
+    update
+
+commit a15b8b2fdbe712820a8474f3f72bfa26b7584aac
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Feb 4 12:56:37 2013 -0500
+
+    update
+
+commit 0dd11366ef0a8b60f6a35fe9c767e3823849955d
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Feb 4 12:54:11 2013 -0500
+
+    update
+
+commit c28172a650f2629eb71633d2b26bebd1fd0bd8ea
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Feb 4 12:50:33 2013 -0500
+
+    update
+
+commit 6a73e093660f0be9cf679d543cffa949b7a9a3ef
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Feb 4 12:45:31 2013 -0500
+
+    update
+
+commit 64b579bc93dfa508ca3953ee82a5c9e9de8d509e
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Feb 4 12:42:34 2013 -0500
+
+    update
+
+commit 9ace51da5bafad76f431b1dd5f9ac9e6fea958c8
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Feb 4 12:38:55 2013 -0500
+
+    update
+
+commit b626f4233a393ad54bdd6f7152254270bc63deb7
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Feb 4 12:32:32 2013 -0500
+
+    update
+
+commit eb06db2f229d46c995ebc051b06c0c45245c91d1
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Feb 4 12:27:31 2013 -0500
+
+    update
+
+commit 6b17deacc20fde5f2babb9a3802bcdf3e054cf89
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Feb 4 12:25:54 2013 -0500
+
+    update
+
+commit 02329c3b9edb27bea21cc0cb0533d21c9f6ec7ce
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Feb 4 12:23:30 2013 -0500
+
+    update
+
+commit 03f985866e2805177f5c289a6d0d1999ecef83e7
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Fri Feb 1 15:47:31 2013 -0500
+
+    update
+
+commit 0ff0dbe5dfb0a290de35f997eab21f20b91c388b
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Thu Jan 31 18:50:12 2013 -0500
+
+    update doc
+
+commit 5d3718fb0bc3a172ec44aa9fb6bb9a5ec5d11d3c
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Thu Jan 31 18:49:20 2013 -0500
+
+    update doc
+
+commit 2ceff81148ca074d8467885bc5677714d4477996
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Thu Jan 31 18:47:30 2013 -0500
+
+    update doc
+
+commit ecc9e44e9c228ce2ac2d018e8ea24c1c68c694e3
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Thu Jan 31 18:44:06 2013 -0500
+
+    update doc
+
+commit c101b2d7d46aa24a2473ebf8d02eaecda29a59ba
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Thu Jan 31 18:23:46 2013 -0500
+
+    update doc
+
+commit 4c97730336e4baa829fc1c704ac8085badcc4028
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Thu Jan 24 14:37:17 2013 -0500
+
+    update
+
+commit 194f9f51bf5d437ccf14f7f9412cef14492e7850
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Thu Jan 24 14:09:30 2013 -0500
+
+    update
+
+commit 0786db008a24f85a322257e08423a48a79e9281d
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Thu Jan 24 10:23:06 2013 -0500
+
+    update
+
+commit 21dee49ec9798e47fec0a16a3bc19da1c35d2598
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Thu Jan 24 10:15:13 2013 -0500
+
+    update
+
+commit 347acf68bdc117a10bd5c7ee1881595bcc6f18cc
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jan 23 18:41:43 2013 -0500
+
+    update
+
+commit 70cd6443ef1ed05cb99dd8c5c44fd55b52dfe96e
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Sun Jan 20 04:38:15 2013 -0500
+
+    update
+
+commit 4dba2b546f3f155f1bc39d696a7aaf805cda1d0a
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Sun Jan 20 04:37:10 2013 -0500
+
+    update
+
+commit 19b9da04b31f6f4aaa2c66bcb7d75d001ec3f898
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Sun Jan 20 04:25:08 2013 -0500
+
+    update
+
+commit 8db2f969ba5be2fcc5cb99c828688435f3e2ad65
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Sun Jan 20 04:20:18 2013 -0500
+
+    update
+
+commit c3a04c0b0518f0692f5c1dc1ddea165648e63816
+Merge: bb4e8b7 5d33179
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Sun Jan 20 04:15:02 2013 -0500
+
+    update
+
+commit bb4e8b7f4c24573bb78a14b5843b7489862149bb
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Sun Jan 20 04:12:52 2013 -0500
+
+    update
+
+commit 5d3317902921de77f7df7f73bf4e1aec5a7d9097
+Author: laszewsk <laszewski@gmail.com>
+Date:   Thu Jan 17 12:00:05 2013 -0500
+
+    fixed License file
+
+commit 33378e44461e5f445f14f16db56126b9e1c2bd47
+Author: laszewsk <laszewski@gmail.com>
+Date:   Thu Jan 17 11:56:45 2013 -0500
+
+    fixed License file
+
+commit 2a6fd53725a4c3989c05cdef678008a737f76fc0
+Author: laszewsk <laszewski@gmail.com>
+Date:   Thu Jan 17 11:54:51 2013 -0500
+
+    fixed License file
+
+commit ac853b539cdd5c3b4c28d71bdc235f75f6c078d6
+Author: laszewsk <laszewski@gmail.com>
+Date:   Thu Jan 17 11:47:56 2013 -0500
+
+    corrected the configuration file
+
+commit 0c4fef8031712354ba25348b3fca6f3625e82789
+Author: laszewsk <laszewski@gmail.com>
+Date:   Thu Jan 17 11:45:09 2013 -0500
+
+    corrected the configuration file
+
+commit b72688f2f9437be3441cdfe1b4eee8d690ef2e4b
+Author: laszewsk <laszewski@gmail.com>
+Date:   Thu Jan 17 11:43:54 2013 -0500
+
+    corrected the configuration file
+
+commit 1be44c3fdfcd8d7d8a4e56b1e67fa690d85d159e
+Author: laszewsk <laszewski@gmail.com>
+Date:   Thu Jan 17 11:42:08 2013 -0500
+
+    corrected the configuration file
+
+commit bfd99ecbce1665b7293003a49739bf44de001367
+Author: laszewsk <laszewski@gmail.com>
+Date:   Thu Jan 17 11:39:14 2013 -0500
+
+    fixed intro documentation
+
+commit 90fd4e4f338338071c95f820e30544e5c0cc2f9b
+Author: laszewsk <laszewski@gmail.com>
+Date:   Thu Jan 17 11:36:45 2013 -0500
+
+    improved documentation significantly
+
+commit 4b11021167234164249989470bca178cfde1f434
+Author: laszewsk <laszewski@gmail.com>
+Date:   Thu Jan 17 11:17:40 2013 -0500
+
+    fixed error in rst
+
+commit 9bc9f5e89d983ed2ff34a12d64454f5aa7827724
+Author: laszewsk <laszewski@gmail.com>
+Date:   Thu Jan 17 11:02:01 2013 -0500
+
+    corrected documentation
+
+commit c62f908dcbafb35dd9a276e61c5357f3390f2c96
+Author: laszewsk <laszewski@gmail.com>
+Date:   Thu Jan 17 10:55:24 2013 -0500
+
+    added Apachee Licencxe
+
+commit 6c804ea14d0d1e53322fcb2851a32b7bab773561
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Thu Jan 17 00:09:39 2013 -0500
+
+    update
+
+commit ab9696cb0d5aa3da34b65cb32cc4c101358efcbe
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Thu Jan 17 00:03:01 2013 -0500
+
+    update
+
+commit be0c0c707fe5df23d6d09d4acd66b2fb863e4312
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jan 16 23:43:13 2013 -0500
+
+    update
+
+commit 57b3febd65ef36daadb89917d81456abca60de31
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jan 16 23:34:48 2013 -0500
+
+    update
+
+commit cb25162e9df47cbc3a1e71743b3b2db10729e789
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jan 16 11:48:57 2013 -0500
+
+    update
+
+commit 461ae49468652145d57ce5db32a218ca3117b496
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jan 16 11:34:05 2013 -0500
+
+    update
+
+commit d68e87568384cf310346768dbfd4624a7f222484
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jan 16 11:29:52 2013 -0500
+
+    update
+
+commit 9edae69c482086b565a2648581ee14c380031795
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jan 16 11:18:08 2013 -0500
+
+    update
+
+commit 7da36ac5c3a4887e62226e4e6e913f72805046db
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jan 16 11:09:08 2013 -0500
+
+    update
+
+commit e670da868d12db986d9844ac5f482689553d88b2
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jan 16 11:05:41 2013 -0500
+
+    add new scripts
+
+commit acc71f6f15421dfbaac1e93c262682cd43939a56
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Tue Jan 15 03:14:04 2013 -0500
+
+    update doc
+
+commit 3163a997c4bd6068ce1883496f0dee77a62c38dc
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Tue Jan 15 03:04:45 2013 -0500
+
+    update doc
+
+commit a1eefbfc2b449d80fcd0737e721a83b62048ecb5
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Tue Jan 15 02:55:16 2013 -0500
+
+    update doc
+
+commit 0736eceabd475702c21a7db60a3329eeadc6c058
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Tue Jan 15 02:53:03 2013 -0500
+
+    update doc
+
+commit 8b6afcb0185437fc1f645b40539ec930233a5a76
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Tue Jan 15 02:48:47 2013 -0500
+
+    update doc
+
+commit f48871c61da0e66e0230f80ebac7d7f7632d3e74
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Tue Jan 15 02:29:51 2013 -0500
+
+    update doc
+
+commit cb0e1bc32fb7f9d1420356808bfd26febd47e4a4
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Tue Jan 15 01:39:45 2013 -0500
+
+    update doc
+
+commit b87f203b0d59bac048c1e9981ad19f4b1657c163
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Tue Jan 15 01:37:51 2013 -0500
+
+    update doc
+
+commit e40f445b6b08e1d7b0aa9d51f00ced0d782ed594
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Tue Jan 15 01:36:31 2013 -0500
+
+    update
+
+commit e23ed762601c7ef43e717889c247bbc506efad8b
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Tue Jan 15 01:35:25 2013 -0500
+
+    update
+
+commit 4decd71afa264c8f0ac6f1d601047560f9c7040e
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Sun Jan 13 21:46:21 2013 -0500
+
+    update
+
+commit 8e16ae5d0e64839e1eca52abfc0072024928df73
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Sun Jan 13 19:16:19 2013 -0500
+
+    update
+
+commit 335e14278e81d8ec2f61c628fde9c3b2367fd524
+Author: Javier Diaz <javier.diazmontes@gmail.com>
+Date:   Wed Sep 19 11:18:39 2012 -0400
+
+    typos
+
+commit bb91d1dd8488d78b5359d8581567f1c9d3605c06
+Author: Javier Diaz <javier.diazmontes@gmail.com>
+Date:   Wed Sep 19 11:17:38 2012 -0400
+
+    version file fixed
+
+commit 0ac093fbb3deca9125bae119d562e24eb487768e
+Author: Gregor von Laszewski <laszewski@gmail.com>
+Date:   Fri Sep 14 10:00:08 2012 -0400
+
+    aadding a relative basename
+
+commit 2424577cac88642d54da2d2bd960a2b151e86731
+Author: Gregor von Laszewski <laszewski@gmail.com>
+Date:   Thu Sep 13 12:31:27 2012 -0400
+
+    trying to fix teefa documentation teefaa
+
+commit 612ee256ffb4cdd737a395c94adcda50cf5a61ac
+Author: Gregor von Laszewski <laszewski@gmail.com>
+Date:   Thu Sep 13 12:21:18 2012 -0400
+
+    alligning pading
+
+commit dbffbce380121107c666107d40d255c21c7184b0
+Merge: 51b25c9 6f02b94
+Author: Gregor von Laszewski <laszewski@gmail.com>
+Date:   Thu Sep 13 12:15:02 2012 -0400
+
+    Merge branch 'master' of https://github.com/futuregrid/teefaa
+
+commit 51b25c9753df26dfe46a9ff3c68e5b5b512e0a33
+Author: Gregor von Laszewski <laszewski@gmail.com>
+Date:   Thu Sep 13 12:14:38 2012 -0400
+
+    alligning pading
+
+commit 6f02b946f705a5c142e21db33519bd9289d6745c
+Author: Javier Diaz <javier.diazmontes@gmail.com>
+Date:   Wed Aug 15 14:04:52 2012 -0400
+
+    teefaa list images
+
+commit 27baaa5e50265b1c6ea7ebed0051043191825ade
+Author: Javier Diaz <javier.diazmontes@gmail.com>
+Date:   Wed Aug 15 13:58:32 2012 -0400
+
+    teefaa list images
+
+commit 20146e27b89d859c32b224d6c8792c8edf6e493d
+Author: Javier Diaz <javier.diazmontes@gmail.com>
+Date:   Wed Aug 15 13:57:48 2012 -0400
+
+    teefaa list images
+
+commit c12b735f83044f5ef45bf9d3737d22f9609fabad
+Author: Javier Diaz <javier.diazmontes@gmail.com>
+Date:   Wed Aug 15 13:56:43 2012 -0400
+
+    teefaa list images
+
+commit 964fbbb66d70b5ef220a0fc1ad537b89ed8348f3
+Author: Javier Diaz <javier.diazmontes@gmail.com>
+Date:   Wed Aug 15 13:56:12 2012 -0400
+
+    teefaa list images
+
+commit 81504dca7967040da635f87ad0dbfb670e15ba31
+Author: Javier Diaz <javier.diazmontes@gmail.com>
+Date:   Wed Aug 15 13:51:06 2012 -0400
+
+    teefaa list images
+
+commit 6f57703309b11b2b9b76544df6baac49c52173f8
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Aug 1 09:24:26 2012 -0400
+
+    test
+
+commit 6ac600649a9eac14e37928abc488573b1c7f1b4d
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Aug 1 09:22:51 2012 -0400
+
+    test
+
+commit 6c8abe949b1628be31cd601f50173c2203672b52
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Aug 1 09:02:48 2012 -0400
+
+    updated teefaa2.py
+
+commit c4a8e909c011af808a237e6c8975b4c350c918f8
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Tue Jul 31 18:49:19 2012 -0400
+
+    revised teefaa2
+
+commit b279119e404f10a7f4e72ae9768839f5e6af0a09
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Tue Jul 31 18:29:57 2012 -0400
+
+    revised teefaa2
+
+commit 77dc51d76f13cd9f2c47bc954810b8a39ac7e664
+Author: Javier Diaz <javier.diazmontes@gmail.com>
+Date:   Wed Jul 11 17:40:15 2012 -0400
+
+    teefaa
+
+commit 3bf4fe831c983925e81153e055a6105ec26cd05d
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jul 11 17:30:25 2012 -0400
+
+    done
+
+commit 392e385d9e669349c7c7f878d8fa91f128e8b04e
+Author: Javier Diaz <javier.diazmontes@gmail.com>
+Date:   Wed Jul 11 14:30:35 2012 -0400
+
+    teefaa
+
+commit 276c7cc0aef2924bc1f9bfcdb3b9e03a88cef97d
+Merge: fc0fda3 d700e14
+Author: Javier Diaz <javier.diazmontes@gmail.com>
+Date:   Mon Jul 9 13:53:17 2012 -0400
+
+    Merge branch 'master' of github.com:futuregrid/teefaa
+
+commit fc0fda3d8803cb990f9fc496eb804b55f99e6e9b
+Author: Javier Diaz <javier.diazmontes@gmail.com>
+Date:   Mon Jul 9 13:53:00 2012 -0400
+
+    teefaa add sudo
+
+commit d700e1446854737e144e082096fc5d578d07a0ef
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Jul 2 17:16:15 2012 -0400
+
+    updted teefaa2
+
+commit 429517313942613e9a52ff8094eef6df3cad4835
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Jul 2 17:11:22 2012 -0400
+
+    updted teefaa2
+
+commit ecc621c6e727a9a7ac03bae63f83f5e80b144a0b
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Jul 2 16:53:09 2012 -0400
+
+    updted teefaa2
+
+commit 61e4283ed7ee0efd750e000975abd2105d1952fa
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Jul 2 16:51:13 2012 -0400
+
+    updted teefaa2
+
+commit f9933d76386cefe50916211661187217d349a025
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Jul 2 16:39:33 2012 -0400
+
+    updted teefaa2
+
+commit e7b0295cde6620d73c03654bc81b7aefed42155b
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Jul 2 16:36:54 2012 -0400
+
+    changed name of teefaa2
+
+commit 4b354917a9c93b4a5e8131a4e082c2150ff26f5c
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Fri Jun 29 17:59:40 2012 -0400
+
+    start to develop cloud image generator.
+
+commit e8a4c1af60ae2e61ee0cd888750f3c18acf394bd
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Fri Jun 29 17:52:02 2012 -0400
+
+    change name from teefaa1.0 to provisioning.
+
+commit 0aa5da4b64a5f5a4a402a2f69c9c5a6c1fa9aed0
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Fri Jun 29 17:18:17 2012 -0400
+
+    update
+
+commit 4589e6f1d952b0c8cad73fe3e1a4ad6a9762b8bd
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Fri Jun 29 16:25:38 2012 -0400
+
+    updated
+
+commit c2d5fb40be6d0b9465b1a6a7f6ed61e046095d0a
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Fri Jun 29 16:06:49 2012 -0400
+
+    updated teefaa1.0
+
+commit 69cea83190dd3d256cd9e06bd515a03a60de833e
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Fri Jun 29 09:47:13 2012 -0400
+
+    updte
+
+commit b09aa47b2f3d26a36cc1db7ec0cc18fda86ac72d
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Thu Jun 28 22:07:44 2012 -0400
+
+    update
+
+commit 5edd1c947d14c3631c8aab15449e238ae603cdf5
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jun 27 20:10:12 2012 -0400
+
+    updated
+
+commit dccdf3986ac6a42ac63a9c966e3629ae1818eaa9
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jun 27 19:55:59 2012 -0400
+
+    added executeCMD function
+
+commit f64df476d459f70a543ecabb9d78c8290f7561e3
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jun 27 19:39:23 2012 -0400
+
+    updated
+
+commit 982821d1a0b16f26746249560987e739b0b44381
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jun 27 18:49:00 2012 -0400
+
+    updateed
+
+commit 265ad7a170000e0bcf5fe8f2fd6db14983ea2442
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Wed Jun 27 17:04:58 2012 -0400
+
+    updated
+
+commit fc9b3fa9a1bcbb6f2226b4a428955fd944b0dabe
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Mon Jun 25 10:39:40 2012 -0400
+
+    updated
+
+commit 0a98e49756ed985c04c0da6762e16cdc6000182a
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Sun Jun 24 17:49:59 2012 -0400
+
+    updated teefaa1.0
+
+commit f4a86bd425b448d7a411ff2928dc1f09b4bb63a6
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Sun Jun 24 16:13:41 2012 -0400
+
+    updated teefaa1.0
+
+commit 12dadd983b121d9e8755514b5f4d3d329b3b6bf3
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Sun Jun 24 16:06:39 2012 -0400
+
+    updated teefaa1.0
+
+commit 92a06a1c72924e86c854ea2e759b10eb1ffec97d
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Sun Jun 24 16:02:45 2012 -0400
+
+    updated teefaa1.0
+
+commit 139f27c617f02ea77dfe70a53ad46d09f1834a5e
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Sun Jun 24 16:01:10 2012 -0400
+
+    updated teefaa1.0
+
+commit 04cf4cb603ffca95d394e3d7f29ab55ad5f82989
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Sun Jun 24 15:56:28 2012 -0400
+
+    updated teefaa1.0
+
+commit 5683bedfa791185f1634e3ab16bc067838f72fb5
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Sun Jun 24 15:51:26 2012 -0400
+
+    updated teefaa1.0
+
+commit 42edf6889751f31b3131e8dc801b058456b71025
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Sun Jun 24 15:49:03 2012 -0400
+
+    fixed error
+
+commit 27864c8760681a33281044b3f6d0aef801720e09
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Sun Jun 24 15:43:49 2012 -0400
+
+    developing teefaa1.0
+
+commit effc4fb2c4d93774d0ec07f17c8932cac0e51067
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Sun Jun 24 15:01:09 2012 -0400
+
+    developing teefaa1.0
+
+commit e590450bec714db0d32f9eaffff0356373b3ba39
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Sun Jun 24 14:57:20 2012 -0400
+
+    developing teefaa1.0
+
+commit 99f4e6a46fffafca57d83d3dfa1c8428d4dba62b
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Sun Jun 24 14:54:33 2012 -0400
+
+    developing teefaa1.0
+
+commit bf4cf73cc2f995c6337a5a4e7f3570c819e0c53f
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Sat Jun 23 16:07:41 2012 -0400
+
+    added provision.py
+
+commit f66c016603addb40b0f9a040ba563a1f54cf16a4
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Thu Jun 14 17:47:46 2012 -0400
+
+    updated config files
+
+commit 3d9b5aaf7b5185260dfce301cab776c81dd9ff3c
+Author: Javier Diaz <javier.diazmontes@gmail.com>
+Date:   Thu Jun 14 16:07:05 2012 -0400
+
+    teefaa
+
+commit e1fba9a2c0dbab8c40b2bab26941421f1d133c44
+Author: Javier Diaz <javier.diazmontes@gmail.com>
+Date:   Thu Jun 14 15:38:38 2012 -0400
+
+    teefaa
+
+commit 6c1b163bf226525ba6df2be252176e23164c2105
+Author: Javier Diaz <javier.diazmontes@gmail.com>
+Date:   Thu Jun 14 10:04:42 2012 -0400
+
+    teefaa
+
+commit a3680ba6bc21554480c7a7cd4a7b6a8fa8329d37
+Author: Javier Diaz <javier.diazmontes@gmail.com>
+Date:   Wed Jun 13 10:32:29 2012 -0400
+
+    teefaa
+
+commit 68847ea5fcbac1d6ad1a4fb5234257568c6a34f5
+Author: Javier Diaz <javier.diazmontes@gmail.com>
+Date:   Wed Jun 13 10:31:52 2012 -0400
+
+    teefaa
+
+commit dbee103faf003f5b6387058b5fa7f748bea8a0a7
+Author: Javier Diaz <javier.diazmontes@gmail.com>
+Date:   Wed Jun 13 10:31:39 2012 -0400
+
+    teefaa
+
+commit b5cc752acaeea6e8bdd5fe20f8432b61491ef349
+Author: Javier Diaz <javier.diazmontes@gmail.com>
+Date:   Wed Jun 13 10:27:23 2012 -0400
+
+    teefaa
+
+commit 62eda7815d0a35de43b381d0835e68aa378ff01d
+Author: Javier Diaz <javier.diazmontes@gmail.com>
+Date:   Wed Jun 13 10:22:13 2012 -0400
+
+    teefaa
+
+commit 042f3e5226c5c7ea84e782a7d8aaa52cd2c79627
+Author: Javier Diaz <javier.diazmontes@gmail.com>
+Date:   Mon Jun 11 13:25:58 2012 -0400
+
+    teefaa
+
+commit 76bd5f970dd0a349ce148b64516c1eea2068d5ff
+Author: Javier Diaz <javier.diazmontes@gmail.com>
+Date:   Mon Jun 11 10:43:29 2012 -0400
+
+    teefaa
+
+commit 80fe8a843fa3b682cec95209cfe49ba298c299dd
+Author: Javier Diaz <javier.diazmontes@gmail.com>
+Date:   Mon Jun 11 10:32:47 2012 -0400
+
+    teefaa
+
+commit 8bacb94b4e7e217ad0437feb9e0d30ecc2c5efb2
+Author: Javier Diaz <javier.diazmontes@gmail.com>
+Date:   Fri Jun 1 16:19:42 2012 -0400
+
+    teefaa with make-up :P
+
+commit 81c2ad64f56c47033f5b7704d1502126e05948b4
+Author: Javier Diaz <javier.diazmontes@gmail.com>
+Date:   Thu May 31 11:58:38 2012 -0400
+
+    teefaa
+
+commit 8b85fd83d509f47ec5766080040a8c067fbf9ee2
+Author: Javier Diaz <javier.diazmontes@gmail.com>
+Date:   Thu May 31 11:57:35 2012 -0400
+
+    teefaa
+
+commit 49458ef84103eac5f2116059281fb0e2e6b851ea
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Thu May 31 10:50:07 2012 -0400
+
+    changed some
+
+commit 8ce32372053e6fb105d6e4ecb39cf0a49106d686
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Thu May 31 10:46:58 2012 -0400
+
+    changed some
+
+commit c21abc1ec5bb31f78fb725828d15eea6e8c5db1b
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Fri May 25 17:53:00 2012 -0400
+
+    edited config.sumple
+
+commit 2dcb517577ce7dfe632b57e2b6a70439e458c3f5
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Fri May 25 17:36:50 2012 -0400
+
+    updated intro
+
+commit f170c4c601e08f26ff363d69803b3c132f3bc6a0
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Fri May 25 17:24:04 2012 -0400
+
+    edited intro.rst
+
+commit 8fef31d01652783555a4f71b9dd07aebb82b5762
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Fri May 25 17:20:03 2012 -0400
+
+    doc test
+
+commit 57006712a67bfef3de386fac25d6f1a6d6947774
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Fri May 25 17:13:23 2012 -0400
+
+    doc test
+
+commit 73ef001eda666bef230268c00305cc9237fec042
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Fri May 25 17:12:27 2012 -0400
+
+    doc test
+
+commit 1b60b47b100b1570cc772e26686a0438d6187bff
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Fri May 25 17:04:41 2012 -0400
+
+    fixing master
+
+commit e08be6b803ebbf7f0f7f9971b5b40b1c450a4ba4
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Fri May 25 17:03:18 2012 -0400
+
+    fixing master
+
+commit a39dbed24cc84a96b85c688cdf665b401b394172
+Merge: f9d2382 cf9e3ca
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Fri May 25 16:47:49 2012 -0400
+
+    teeffa
+
+commit f9d238259e3cc773ef1f7acbf64e75a40bde41eb
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Fri May 25 16:42:45 2012 -0400
+
+    test editing document.
+
+commit 329f4a4dfca471487fbf541e8a4d05594bec99ea
+Author: Koji Tanaka <kj.tanaka@gmail.com>
+Date:   Fri May 25 16:35:42 2012 -0400
+
+    teefaa code
+
+commit 48becb12df4ff78c866310f3622c71ef9ff282c5
+Author: Koji Tanaka <ktanaka@140-182-130-30.dhcp-bl.indiana.edu>
+Date:   Fri May 25 16:32:38 2012 -0400
+
+    teefaa code
+
+commit c0cf9ae838d2c607cd05623810bc0e9647664d83
+Author: Koji Tanaka <ktanaka@140-182-130-30.dhcp-bl.indiana.edu>
+Date:   Fri May 25 14:48:02 2012 -0400
+
+    updated README.md
+
+commit 92455dc2f95325fd091c09bf1abea3cd34dcc705
+Author: Koji Tanaka <ktanaka@140-182-130-30.dhcp-bl.indiana.edu>
+Date:   Fri May 25 14:45:56 2012 -0400
+
+    updated README.md
+
+commit 541b143960d68c5be63f8df0089641f06a4b1d14
+Author: Koji Tanaka <ktanaka@140-182-130-30.dhcp-bl.indiana.edu>
+Date:   Fri May 25 14:45:26 2012 -0400
+
+    updated README.md
+
+commit 37fc95f3e747438e97ecedb9b5cd0afebf6333b5
+Author: Gregor von Laszewski <laszewski@gmail.com>
+Date:   Thu May 24 13:57:50 2012 -0400
+
+    adding the setup template
+
+commit cf9e3cad42b7f3a95a1ebbe47a9b63ef78deec7b
+Author: Gregor von Laszewski <laszewski@gmail.com>
+Date:   Thu May 24 13:34:45 2012 -0400
+
+    updating the github pages
+
+commit 7b9cab42d85138ff93666a753ff47332f013e672
+Author: Gregor von Laszewski <laszewski@gmail.com>
+Date:   Thu May 24 13:33:25 2012 -0400
+
+    change the header
+
+commit f181d2d77717ed7c7998b15ee098503d872ce03c
+Author: Gregor von Laszewski <laszewski@gmail.com>
+Date:   Thu May 24 13:31:54 2012 -0400
+
+    updating the github pages
+
+commit 6448e0a7a6e0432e471e7c726a8d6ad9b29012f4
+Author: Gregor von Laszewski <laszewski@gmail.com>
+Date:   Thu May 24 13:31:32 2012 -0400
+
+    chnage the header
+
+commit 16f2a3b3cc8336446523e4b47ec37c4cbe1fbb69
+Author: Gregor von Laszewski <laszewski@gmail.com>
+Date:   Thu May 24 13:27:55 2012 -0400
+
+    updating the github pages
+
+commit 07f4fb29071004b086b5ea44a3c100bd460d8785
+Author: Gregor von Laszewski <laszewski@gmail.com>
+Date:   Thu May 24 13:27:12 2012 -0400
+
+    no api yet
+
+commit f103b7588849f0caab37f328f43a11ec3a2d69a9
+Author: Gregor von Laszewski <laszewski@gmail.com>
+Date:   Thu May 24 13:25:09 2012 -0400
+
+    sync
+
+commit c705b721c479758d09fce73db71c3089545aab5d
+Author: Gregor von Laszewski <laszewski@gmail.com>
+Date:   Thu May 24 13:19:08 2012 -0400
+
+    simple mods to the gh-pages conf
+
+commit c3dfe02d1de80139f9e5af51c31b42fb86c9fd41
+Author: Gregor von Laszewski <laszewski@gmail.com>
+Date:   Thu May 24 13:08:57 2012 -0400
+
+    updating the github pages
+
+commit dfa5630daf8232698b31c2cd46b010a90b09d3b6
+Author: Gregor von Laszewski <laszewski@gmail.com>
+Date:   Thu May 24 13:08:08 2012 -0400
+
+    missing makefile
+
+commit 5c4f238fd059cb662930ba063074961608a71c5c
+Author: Gregor von Laszewski <laszewski@gmail.com>
+Date:   Thu May 24 13:01:25 2012 -0400
+
+    disable jekyll
+
+commit 8923f3ba188a69e029034dbf75ea35367f7b7449
+Author: Gregor von Laszewski <laszewski@gmail.com>
+Date:   Thu May 24 12:51:11 2012 -0400
+
+    starting the sphinx framework
+
+commit f3787366ee5bf460cba9eef27c224423a3051a27
+Author: Gregor von Laszewski <laszewski@gmail.com>
+Date:   Thu May 24 09:48:07 2012 -0700
+
+    Created gh-pages branch via GitHub
+
+commit ec51cec4e0c2a25234c84f8dca897888065bd3a0
+Author: Gregor von Laszewski <laszewski@gmail.com>
+Date:   Thu May 24 09:14:47 2012 -0700
+
+    Initial commit

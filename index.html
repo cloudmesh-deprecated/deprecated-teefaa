@@ -10,9 +10,9 @@
     
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/bootstrap-2.3.2/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
-    <link rel="stylesheet" href="_static/bootstrap-2.3.2/css/bootstrap-responsive.min.css" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
@@ -28,7 +28,7 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="Cloudmesh Teefaa  documentation" href="#" />
     <link rel="next" title="Users Guide (Under Construction)" href="usersguide.html" />
@@ -40,23 +40,24 @@
   </head>
   <body>
 
-  <div id="navbar" class="navbar navbar-inverse navbar-fixed-top">
-    <div class="navbar-inner">
-      <div class="container">
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
         <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-        <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-
-        <a class="brand" href="#">FutureGrid teefaa</a>
-        <span class="navbar-text pull-left"><b>v0.3
+        <a class="navbar-brand" href="#">FutureGrid teefaa</a>
+        <span class="navbar-text navbar-version pull-left"><b>v0.3
 </b></span>
+      </div>
 
-        <div class="nav-collapse">
-          <ul class="nav">
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
             <li class="divider-vertical"></li>
+            
             
               <li class="dropdown globaltoc-container">
   <a href="#"
@@ -82,12 +83,14 @@
 </ul>
 </ul>
 </li>
-              <li class="dropdown">
+              
+                <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
 <li><a class="reference internal" href="#">Welcome to Cloudmesh Teefaa!</a><ul>
 <li><a class="reference internal" href="#requirements">Requirements</a></li>
 <li><a class="reference internal" href="#simple-design">Simple Design</a></li>
+<li><a class="reference internal" href="#installation">Installation</a></li>
 <li><a class="reference internal" href="#support">Support</a></li>
 <li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
 </ul>
@@ -95,30 +98,38 @@
 </ul>
 </ul>
 </li>
+              
             
             
               
+                
   <li><a href="usersguide.html"
-         title="next chapter">Users Guide (Under Construction) &raquo;</a></li>
+         title="Next Chapter: Users Guide (Under Construction)">Users Guide (Und... &raquo;</a></li>
+              
+            
+            
             
             
           </ul>
 
           
             
-<form class="navbar-search pull-right" action="search.html" method="get">
-  <input type="text" name="q" class="search-query" placeholder="Search" />
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
   <input type="hidden" name="check_keywords" value="yes" />
   <input type="hidden" name="area" value="default" />
 </form>
           
         </div>
-      </div>
     </div>
   </div>
 
 <div class="container">
-  
+  <div class="row">
+    <div class="col-md-12">
+      
   <a href="https://github.com/futuregrid/teefaa"
     class="visible-desktop"><img
    style="position: absolute; top: 40px; right: 0; border: 0;"
@@ -195,6 +206,27 @@ is to make it understandable by reading the YAML files.</p>
 people to work on multile projects and multiple versions in a simple fashion. For example,
 while one person is developing EXAMPLE, another person can start developing EXAMPLE2.</p>
 </div>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">Download FG Teefaa from the github repository:</p>
+<div class="highlight-python"><pre>git clone https://github.com/cloudmesh/teefaa.git</pre>
+</div>
+</li>
+<li><p class="first">Install required software:</p>
+<div class="highlight-python"><pre>cd teefaa
+pip install -r requirements.txt</pre>
+</div>
+</li>
+<li><p class="first">Confirm you got everything:</p>
+<div class="highlight-python"><pre>cd teefaa
+fab -l</pre>
+</div>
+</li>
+<li><p class="first">That is all for installation and you should be able to see the list of scripts.</p>
+</li>
+</ul>
+</div>
 <div class="section" id="support">
 <h2>Support<a class="headerlink" href="#support" title="Permalink to this headline">¶</a></h2>
 <p>If you run into problems when using this framework, please use our
@@ -211,6 +243,9 @@ help form at <a class="reference external" href="https://portal.futuregrid.org/h
 </div>
 
 
+    </div>
+      
+  </div>
 </div>
 <footer class="footer">
   <div class="container">
