@@ -3,17 +3,9 @@
 from __future__ import print_function
 import os
 import sys
-import time
 import yaml
 
-from fabric.api import (
-        env,
-        hide,
-        local,
-        run,
-        sudo,
-        task
-        )
+from fabric.api import env
 
 def read_config():
     """Make snapshot"""
@@ -35,7 +27,7 @@ def read_config():
     try:
         env.ssh_config_path = os.path.expanduser(config['ssh_config'])
     except KeyError:
-        print("ssh_config doesn't exist in .teefaa.yml or .teefaa.local.yml", file=sys.stderr)
+        print("ssh_config doesn't exist in Teefaafile.yml", file=sys.stderr)
         exit(1)
-   
+
     return config

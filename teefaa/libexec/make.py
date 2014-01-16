@@ -41,7 +41,10 @@ class MakeSnapshot(object):
         except:
             self.overwrite = True
         self.save_as = config['snapshot_config']['snapshot_path']
-        self.exclude_list = config['snapshot_config']['exclude']
+        try:
+            self.exclude_list = config['snapshot_config']['exclude']
+        except:
+            self.exclude_list = None
         self.tmp_dir = "/tmp/teefaa"
         self.user = run("echo $USER")
         self.squashfs = "{tmp_dir}/filesystem.squashfs".format(tmp_dir=self.tmp_dir)
@@ -219,15 +222,13 @@ class MakeIso(object):
         """
         print("Mounting root filesystem of base image...")
         time.sleep(1)
+        _dir = self.base_squashfs_dir
+        _squashfs = self.base_squashfs
         # Make sure base_squash_dir exists
-        cmd = ['ls', self.base_squashfs_dir, '||', 
-                    'mkdir', '-p', self.base_squashfs_dir]
-        sudo(' '.join(cmd))
-        try:
-            cmd = ['df', '-ha', '|', 'grep', self.base_squashfs_dir]
-            sudo(' '.join(cmd))
-        except:
-            cmd = ['mount', '-o','loop', self.base_squashfs, self.base_squashfs_dir]
+        with mode_sudo(): dir_ensure(_dir)
+        _output = sudo("df -ha")
+        if not _dir in _output:
+            cmd = ['mount', '-o','loop', _squashfs, _dir]
             sudo(' '.join(cmd))
 
     def _copy_base_squashfs_to_new_squashfs(self):
@@ -235,9 +236,11 @@ class MakeIso(object):
         Copy files from base system to new system...
         """
         print("Copying files from base system to new system...")
+        _base_dir = self.base_squashfs_dir
+        _new_dir = self.new_squashfs_dir
         time.sleep(1)
         cmd = ['rsync', '-a', '--stats', '--delete',
-                self.base_squashfs_dir+'/', self.new_squashfs_dir.rstrip('/')]
+                _base_dir+'/', _new_dir.rstrip('/')]
         sudo(' '.join(cmd))
 
     def _mount_proc_sys_dev(self):
@@ -389,12 +392,12 @@ class MakeIso(object):
         print("Updating menu.cfg...")
         menu_cfg_file = "isolinux/menu.cfg"
         new_menu_cfg = text_strip_margin("""
-        |DEFAULT live
+        |DEFAULT Teefaa
         |TIMEOUT 10
         |TOTALTIMEOUT 20
         |
-        |LABEL live
-        |    MENU LABEL live
+        |LABEL Teefaa
+        |    MENU LABEL Teefaa
         |    KERNEL /live/vmlinuz
         |    APPEND initrd=/live/initrd.img boot=live config quiet noprompt noeject
         |""")
@@ -505,8 +508,9 @@ def make_fs():
 
 @task
 def make_iso():
-    mkiso = MakeIso()
-    mkiso.run()
+    with hide('running', 'stdout'):
+        mkiso = MakeIso()
+        mkiso.run()
 
 @task
 def make_snapshot():
