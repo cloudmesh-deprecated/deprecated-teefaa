@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4
 
 import os
 import time
@@ -18,6 +17,7 @@ from fabric.contrib.files import (
         put
         )
 from cuisine import (
+        dir_ensure,
         file_append,
         file_exists,
         file_is_link,
@@ -49,7 +49,7 @@ class InstallSnapshot(object):
 
     def _upload_squashfs(self):
         # Download snapshot
-        print("Uploading snapshot '{f}'...".format(f=self.squashfs))
+        print("Uploading snapshot '{f}'...".format(f=self.snapshot_file))
         if not file_exists(self.squashfs):
             put(self.snapshot_file, self.squashfs)
             sudo("sync && echo 3 > /proc/sys/vm/drop_caches")
@@ -84,13 +84,52 @@ class Condition(object):
         config = read_config()
         env.host_string = config['host_config']['hostname']
         self.distro = config['snapshot_config']['os']['distro']
+        self.user = config['user_config']['username']
+        self.home_dir = "/home/" + self.user
+        self.authorized_keys = config['user_config']['authorized_keys_path']
         self.interfaces = config['network_config']
         self.disk_config = config['disk_config']
         self.rootimg = "/mnt"
         if not file_exists(self.rootimg + '/etc'):
             raise IOError("snapshot isn't installed yet.")
 
+    def condition_common(self):
+        
+        self._condition_common_rules()
+        self._condition_common_user()
+
+    def _condition_common_rules(self):
+
+        time.sleep(1)
+        file_path = "/mnt/etc/udev/rules.d/70-persistent-net.rules"
+        if file_exists(file_path):
+            if not file_is_link(file_path):
+                cmd = ['rm', '-rf', file_path]
+                sudo(' '.join(cmd))
+                cmd = ['ln', '-s', '/dev/null', file_path]
+                sudo(' '.join(cmd))
+
+    def _condition_common_user(self):
+
+        cmd = ['chroot', self.rootimg, 'id', self.user, '||',
+                'chroot', self.rootimg, 'useradd', self.user, '-m',
+                '-s', '/bin/bash', '-d', self.home_dir]
+        sudo(' '.join(cmd))
+        with mode_sudo():
+            ssh_dir = '/mnt/' + self.home_dir + '/.ssh'
+            dir_ensure(ssh_dir, mode=700)
+        put(self.authorized_keys, ssh_dir + '/authorized_keys',
+                use_sudo=True, mode=0644)
+        cmd = ['chroot', self.rootimg, 'chown', '-R', self.user,
+                self.home_dir + '/.ssh']
+        sudo(' '.join(cmd))
+
+        sudo_conf = self.rootimg + '/etc/sudoers'
+        append_text = "{u}   ALL=NOPASSWD:ALL".format(u=self.user)
+        append(sudo_conf, append_text, use_sudo=True)
+
     def condition_ubuntu(self):
+        print("Updating configuration...")
         self.condition_common()
         self._condition_ubuntu_hostname()
         self._condition_ubuntu_network()
@@ -100,14 +139,12 @@ class Condition(object):
 
     def _condition_ubuntu_hostname(self):
 
-        print("Updating hostname...")
         time.sleep(1)
         with mode_sudo():
             file_write('/mnt/etc/hostname', env.host_string)
 
     def _condition_ubuntu_network(self):
 
-        print("Updating network interface...")
         text = text_strip_margin("""
         |# This file describes the network interfaces available on your system
         |# and how to activate them. For more information, see interfaces(5).
@@ -138,7 +175,6 @@ class Condition(object):
 
     def _condition_ubuntu_fstab(self):
 
-        print("updating /etc/fstab...")
         time.sleep(1)
         file_path = "/mnt/etc/fstab"
         label_type = self.disk_config['label_type']
@@ -168,7 +204,6 @@ class Condition(object):
 
     def _condition_ubuntu_mtab(self):
 
-        print("Updating /etc/mtab...")
         time.sleep(1)
         file_path = "/mnt/etc/mtab"
         label_type = self.disk_config['label_type']
@@ -199,33 +234,16 @@ class Condition(object):
 
     def _condition_ubuntu_resolv(self):
 
-        print("Updating /etc/resolv.conf...")
         file_path = "/mnt/etc/resolv.conf"
         sudo("rm -f " + file_path)
         sudo("cat /etc/resolv.conf > " + file_path)
-
-    def condition_common(self):
-        
-        self._condition_common_rules()
-
-    def _condition_common_rules(self):
-
-        print("Updating /etc/udev/rules.d/70-persistent-net.rules...")
-        time.sleep(1)
-        file_path = "/mnt/etc/udev/rules.d/70-persistent-net.rules"
-        if file_exists(file_path):
-            if not file_is_link(file_path):
-                cmd = ['rm', '-rf', file_path]
-                sudo(' '.join(cmd))
-                cmd = ['ln', '-s', '/dev/null', file_path]
-                sudo(' '.join(cmd))
 
     def run(self):
         sub_func = getattr(self, 'condition_' + self.distro)
         sub_func()
 
 
-class InstallGrub(object):
+class InstallBootloader(object):
 
     def __init__(self):
         config = read_config()
@@ -239,7 +257,6 @@ class InstallGrub(object):
 
     def _install_bootloader_mount_devices(self):
 
-        print("Mounting /proc /sys /dev...")
         with hide('stdout', 'running'):
             output = sudo("df -a")
         mpoint = "/mnt/proc"
@@ -261,7 +278,6 @@ class InstallGrub(object):
 
     def _install_bootloader_grub2(self):
 
-        print("Installing Grub2...")
         #cmd = ['chroot', '/mnt', 'apt-get', '-o','Dpkg::Options::=\'--force-confdef\'','-o',
         #        'Dpkg::Options::=\'--force-confold\'', '-f','-q', '-y', 'install', 'grub2']
         #sudo(' '.join(cmd))
@@ -272,6 +288,7 @@ class InstallGrub(object):
         sudo("sync")
 
     def run(self):
+        print("Installing Bootloader...")
         sub_func = getattr(self, 'install_bootloader_' + self.bootloader_type)
         sub_func()
 
@@ -288,5 +305,5 @@ def condition():
 
 @task
 def install_grub():
-    inst_grub = InstallGrub()
+    inst_grub = InstallBootloader()
     inst_grub.run()
