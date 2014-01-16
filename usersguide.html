@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 
 
@@ -16,7 +15,7 @@
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '',
+        URL_ROOT:    './',
         VERSION:     '',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
@@ -50,8 +49,9 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.html">Cloudmesh teefaa</a>
-        <span class="navbar-text navbar-version pull-left"><b>v0.3
+        <a class="navbar-brand" href="index.html"><img src="_static/fg-logo-white-24x36.png">
+          Cloudmesh teefaa</a>
+        <span class="navbar-text navbar-version pull-left"><b>v0.4.0
 </b></span>
       </div>
 
@@ -67,7 +67,8 @@
   <ul class="dropdown-menu globaltoc"
     ><ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="">Users Guide</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#make-a-teefaa-iso-pxe-boot-image">Make a Teefaa ISO/PXE boot image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#make-a-snapshot-of-your-system">Make a snapshot of your system</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="adminguide.html">Instalation</a><ul>
@@ -89,7 +90,8 @@
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
 <li><a class="reference internal" href="#">Users Guide</a><ul>
-<li><a class="reference internal" href="#installation">Installation</a></li>
+<li><a class="reference internal" href="#make-a-teefaa-iso-pxe-boot-image">Make a Teefaa ISO/PXE boot image</a></li>
+<li><a class="reference internal" href="#make-a-snapshot-of-your-system">Make a snapshot of your system</a></li>
 </ul>
 </li>
 </ul>
@@ -100,10 +102,14 @@
             
               
                 
-  <li><a href="index.html"
-         title="Previous Chapter: Welcome to Cloudmesh Teefaa!">&laquo; Welcome to Cloud...</a></li>
-  <li><a href="adminguide.html"
-         title="Next Chapter: Instalation">Instalation &raquo;</a></li>
+  <li>
+    <a href="index.html" title="Previous Chapter: Welcome to Cloudmesh Teefaa!"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Welcome to Cloud...</span>
+    </a>
+  </li>
+  <li>
+    <a href="adminguide.html" title="Next Chapter: Instalation"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Instalation &raquo;</span>
+    </a>
+  </li>
               
             
             
@@ -131,34 +137,87 @@
       
   <div class="section" id="users-guide">
 <h1>Users Guide<a class="headerlink" href="#users-guide" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="installation">
-<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
-<ul>
-<li><p class="first">Install required software. Teefaa depends on a small set of
-software. Best is to install it via pip:</p>
-<div class="highlight-python"><pre>pip install -r requirements.txt</pre>
+<p>What Teefaa actually does is to make a snapshot of a Operating System and provision it
+on another Baremetal/Virtual Machine, and it uses ISO/PXE Boot image in the provisioning
+process. So there are three major steps as listed below.</p>
+<ol class="arabic simple">
+<li>Make a Teefaa ISO/PXE boot image.</li>
+<li>Make a snapshot of your system.</li>
+<li>Provision your system snapshot on another machine.</li>
+</ol>
+<p>An easy way to try Teefaa is to use VirtualBox. So it would be great if you have a
+baremetal machine which you want to backup. Teefaa can make a snapshot of your system
+and provision it on a VM of your VirtualBox.</p>
+<p>I use Vagrant to simplify the procesedure, so please install VirtualBox and Vagrant
+before starting this tutorial.</p>
+<div class="section" id="make-a-teefaa-iso-pxe-boot-image">
+<h2>Make a Teefaa ISO/PXE boot image<a class="headerlink" href="#make-a-teefaa-iso-pxe-boot-image" title="Permalink to this headline">¶</a></h2>
+<p>ISO image of Teefaa is based on Debian7 and you can create the image with Ubuntu or Debian.
+Here I&#8217;ll use Ubuntu VM with Vagrant. Here&#8217;s my example Vagrantfile.</p>
+<blockquote>
+<div><p>Vagrant.configure(&#8220;2&#8221;) do <a href="#id1"><span class="problematic" id="id2">|config|</span></a></p>
+<blockquote>
+<div><dl class="docutils">
+<dt>config.vm.define :ubuntu1204 do <a href="#id3"><span class="problematic" id="id4">|ubuntu1204|</span></a></dt>
+<dd>ubuntu1204.vm.box = &#8216;ubuntu-12.04&#8217;
+ubuntu1204.vm.box_url = &#8216;<a class="reference external" href="http://cloud-images.ubuntu.com/vagrant/precise/current/precise-server-cloudimg-amd64-vagrant-disk1.box">http://cloud-images.ubuntu.com/vagrant/precise/current/precise-server-cloudimg-amd64-vagrant-disk1.box</a>&#8216;
+ubuntu1204.vm.hostname = &#8220;ubuntu1204&#8221;</dd>
+</dl>
+<p>end</p>
+</div></blockquote>
+<p>end</p>
+</div></blockquote>
+<p>And, boot the VM.</p>
+<blockquote>
+<div>vagrant up ubuntu1204
+vagrant ssh-config ubuntu1204 &gt; ssh-config</div></blockquote>
+<p>The ssh-config is used by Teefaa to login the VM.</p>
+<p>Next, write the configuration for making ISO image and save the file named as Teefaafile.</p>
+<blockquote>
+<div><p>ssh_config: ssh-config</p>
+<dl class="docutils">
+<dt>iso_config:</dt>
+<dd><p class="first">base_iso: debian-live-7.2-amd64-standard.iso
+base_iso_url: <a class="reference external" href="http://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/debian-live-7.2-amd64-standard.iso">http://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/debian-live-7.2-amd64-standard.iso</a>
+builder:</p>
+<blockquote>
+<div>hostname: ubuntu1204
+distro: ubuntu</div></blockquote>
+<p class="last">save_as: teefaa-debian-live.iso</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>Then, execute this command.</p>
+<blockquote>
+<div>teefaa make-iso</div></blockquote>
+<p>This will generate the custom ISO image and save it as teefaa-debian-live.iso.</p>
 </div>
-<p>after you download it</p>
-</li>
-<li><p class="first">Advanced features of teefa also depend on the cloudmesh core
-software. This includes a database for managing compute resources.
-Please, visit the cloudmesh web site on github.</p>
-<ul class="simple">
-<li><a class="reference external" href="https://github.com/cloudmesh">https://github.com/cloudmesh</a></li>
-</ul>
-</li>
-<li><p class="first">Download Cloudmesh Teefaa from github repository.</p>
-<div class="highlight-python"><pre>git clone https://github.com/cloudmesh/teefaa.git</pre>
-</div>
-</li>
-<li><p class="first">Confirm you got everything.</p>
-<div class="highlight-python"><pre>cd teefaa
-fab -l</pre>
-</div>
-</li>
-<li><p class="first">That is all for installation and you should be able to see the list of scripts.</p>
-</li>
-</ul>
+<div class="section" id="make-a-snapshot-of-your-system">
+<h2>Make a snapshot of your system<a class="headerlink" href="#make-a-snapshot-of-your-system" title="Permalink to this headline">¶</a></h2>
+<p>To make a snapshot of your system, you need to update your ssh-config to be able to login
+to the host by ssh &lt;hostname&gt;.</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>Host ubuntu1204</dt>
+<dd>HostName 127.0.0.1
+User vagrant
+Port 2222
+UserKnownHostsFile /dev/null
+StrictHostKeyChecking no
+PasswordAuthentication no
+IdentityFile /home/ktanaka/.vagrant.d/insecure_private_key
+IdentitiesOnly yes
+LogLevel FATAL</dd>
+</dl>
+<p># Add the host to make a snapshot
+Host host001</p>
+<blockquote>
+<div>HostName 192.168.32.102
+User myuser
+IdentityFile /path/to/private_key
+UserKnownHostsFile /dev/null
+StrictHostKeyChecking no</div></blockquote>
+</div></blockquote>
 </div>
 </div>
 

@@ -1,4 +1,0 @@
-
-    [console_scripts]
-    teefaa = teefaa.baremetal_provisioning:main
-    
