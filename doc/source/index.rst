@@ -1,65 +1,16 @@
-.. raw:: html
-
 Welcome to Cloudmesh Teefaa!
 ====================
+
+Cloudmesh Teefaa is a simplified baremetal provisioner of Linux based system. 
+It allows you to make a snapshot of system and provision it on another
+baremetal/virtual machine.
 
   .. toctree::
    :maxdepth: 2
 
+   install
    usersguide
-   adminguide
-   modules
+   devguide
+   support
    license
-
-Cloudmesh Teefaa is a set of deployment scripts for with focuss on bare metal provisioning. Cloudmesh Teefaa is 
-simple and flexible allowing contributors to expand upon it.
-
-Requirements
-------------
-
-FG Teefaa requires(/thanks to):
-
-* Python, version 2.7
-* Python Modules
-
-  - Fabric, version 1.6
-  - Cuisine, version 0.6
-  - PyYAML, version 3.10
-
-* Squashfs-tools (for creating snapshots of Operating System)
-* Bittorrent Sync (for high-speed multiple Baremetal Provisioning)
-* Torque Resource Manager (for scheduing Baremetal Provisioning)
-
-
-Installation
-------------
-
-* Download FG Teefaa from the github repository::
-
-     git clone https://github.com/cloudmesh/teefaa.git
-
-* Install required software::
-
-     cd teefaa
-     python setup.py install
-     
-* Confirm you got everything::
-
-     teefaa -h
-
-* That is all for installation and you should be able to see the list of scripts.
-
-
-Support
--------
-
-If you run into problems when using this framework, please use our 
-help form at `https://portal.futuregrid.org/help <https://portal.futuregrid.org/help>`_.
- 
-Indices and tables
-------------------
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
 

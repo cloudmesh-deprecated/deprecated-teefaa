@@ -7,14 +7,15 @@ from fabric.api import (
         cd,
         env,
         get,
+        hide,
+        local,
+        put,
         run,
         sudo,
         task
         )
-from fabric.contrib.files import (
-        append,
-        get
-        )
+from fabric.contrib.files import append
+
 from cuisine import (
         dir_ensure,
         dir_exists,
@@ -27,7 +28,7 @@ from cuisine import (
         text_strip_margin
         )
 
-from .common import read_config
+from .common import read_config, do_sudo
 
 class MakeSnapshot(object):
 
@@ -82,7 +83,12 @@ class MakeSnapshot(object):
                 pass
             cmd.append('/')
             cmd.append(self.rootimg)
-            sudo(' '.join(cmd))
+            do_sudo(cmd)
+            # Make sure /boot is copied.
+            cmd = ['rsync', '-a', '--stats', '--delete',
+                    '--one-file-system', '/boot/', 
+                    self.rootimg + '/boot']
+            do_sudo(cmd)
 
     def _make_squashfs(self):
         """
@@ -135,13 +141,15 @@ class MakeSnapshot(object):
         print(text)
 
 
-class MakeIso(object):
+class MakeInstaller(object):
 
     def __init__(self):
         """Make ISO image"""
         # Set variables
         config = read_config()
         env.host_string = config['iso_config']['builder']['hostname']
+        self.user = 'teefaa'
+        self.ssh_key = config['ssh_key']
         self.distro = config['iso_config']['builder']['distro']
         self.base_iso = '/tmp/' + config['iso_config']['base_iso']
         self.base_iso_url = config['iso_config']['base_iso_url']
@@ -177,10 +185,7 @@ class MakeIso(object):
         """
         print("Downloading base image...")
         time.sleep(1)
-        try:
-            cmd = ['ls', self.base_iso, '1>/dev/null']
-            sudo(' '.join(cmd))
-        except:
+        if not file_exists(self.base_iso):
             cmd = ['wget', self.base_iso_url, '-O', self.base_iso]
             sudo(' '.join(cmd))
 
@@ -190,13 +195,10 @@ class MakeIso(object):
         """
         print("Mounting base image...")
         time.sleep(1)
-        cmd = ['ls', self.base_iso_dir, '1>/dev/null', '||', 
-                'mkdir', '-p', self.base_iso_dir]
-        sudo(' '.join(cmd))
-        try:
-            cmd = ['df', '-ha', '|', 'grep', self.base_iso_dir, '1>/dev/null']
-            sudo(' '.join(cmd))
-        except:
+        with mode_sudo():
+            dir_ensure(self.base_iso_dir, recursive=True)
+        output = sudo("df -a")
+        if not self.base_iso_dir in output:
             cmd = ['mount', '-o','loop', self.base_iso, self.base_iso_dir]
             sudo(' '.join(cmd))
 
@@ -207,9 +209,8 @@ class MakeIso(object):
         print("Copying files from base image to new image...")
         time.sleep(1)
         # Make sure new_iso_dir exists
-        cmd = ['ls', self.new_iso_dir, '||', 
-                    'mkdir', '-p', self.new_iso_dir]
-        sudo(' '.join(cmd))
+        with mode_sudo():
+            dir_ensure(self.new_iso_dir)
         # Copy files to new dir
         cmd = ['rsync', '-a', '--stats', '--delete',
                 '--exclude=\"/live/filesystem.squashfs\"', 
@@ -247,29 +248,21 @@ class MakeIso(object):
         """
         Mount /proc /sys /dev...
         """
-        print("Mounting /proc /sys /dev...")
+        print("Mounting proc, sys, dev...")
         time.sleep(1)
         # Mount /proc
-        try:
-            cmd = ['df', '-a', '|', 'grep', self.new_squashfs_dir + '/proc']
-            sudo(' '.join(cmd))
-        except:
+        output = sudo("df -ha")
+        if not '/proc' in output:
             cmd = ['mount', '-t', 'proc', 'proc', self.new_squashfs_dir + '/proc']
-            sudo(' '.join(cmd))
+            do_sudo(cmd)
         # Mount /sys
-        try:
-            cmd = ['df', '-a', '|', 'grep', self.new_squashfs_dir + '/sys']
-            sudo(' '.join(cmd))
-        except:
+        if not '/sys' in output:
             cmd = ['mount', '-t', 'sysfs', 'sys', self.new_squashfs_dir + '/sys']
-            sudo(' '.join(cmd))
+            do_sudo(cmd)
         # Mount /dev
-        try:
-            cmd = ['df', '-a', '|', 'grep', self.new_squashfs_dir + '/dev']
-            sudo(' '.join(cmd))
-        except:
+        if not '/dev' in output:
             cmd = ['mount', '-o', 'bind', '/dev', self.new_squashfs_dir + '/dev']
-            sudo(' '.join(cmd))
+            do_sudo(cmd)
 
     def _install_packages_in_new_image(self):
         """
@@ -277,15 +270,16 @@ class MakeIso(object):
         """
         print("Installing required packages in new image...")
         time.sleep(1)
+        #TODO: /etc/resolve.conf should be recovered after this.
         # Copy /etc/resolv.conf to new image's dir
         cmd = ['cp', '/etc/resolv.conf', self.new_squashfs_dir + '/etc/resolv.conf']
-        sudo(' '.join(cmd))
+        do_sudo(cmd)
         # Install packages
         cmd = ['chroot', self.new_squashfs_dir, 'aptitude', 'update']
-        sudo(' '.join(cmd))
+        do_sudo(cmd)
         cmd = ['chroot', self.new_squashfs_dir, 'aptitude', '-y', 'install',
                 'openssh-server', 'vim', 'squashfs-tools', 'xfsprogs', 'parted']
-        sudo(' '.join(cmd))
+        do_sudo(cmd)
 
     def _create_user(self):
         """
@@ -293,44 +287,36 @@ class MakeIso(object):
         """
         print("Creating admin user...")
         time.sleep(1)
-        # Create admin user
         root_dir = self.new_squashfs_dir
-        user = run("echo $USER")
-        home_dir = run("echo $HOME")
-        try:
-            cmd = ['chroot', root_dir, 'id', user]
-            sudo(' '.join(cmd))
-        except:
+        user = self.user
+        home_dir = '/home/' + user
+        # Create admin user
+        cmd = ['grep', user, self.new_squashfs_dir + '/etc/passwd']
+        output = do_sudo(cmd, warn_only=True)
+        if not user in output:
             cmd = ['chroot', root_dir, 'useradd', user, '-m',
                     '-s', '/bin/bash', '-d', home_dir]
-            sudo(' '.join(cmd))
+            do_sudo(cmd)
         # Copy ~/.ssh
-        try:
-            cmd = ['diff', home_dir + '/.ssh/authorized_keys',
-                    root_dir + home_dir + '/.ssh/authorized_keys']
-            sudo(' '.join(cmd))
-        except:
-            cmd = ['ls', root_dir + home_dir, '||', 'mkdir', root_dir + home_dir]
-            sudo(' '.join(cmd))
-            cmd = ['cp', '-rp', home_dir + '/.ssh', root_dir + home_dir + '/.ssh']
-            sudo(' '.join(cmd))
-            cmd = ['chroot', root_dir, 'chown', '-R', user, home_dir + '/.ssh' ]
-            sudo(' '.join(cmd))
+        ssh_dir = root_dir + home_dir + '/.ssh'
+        ssh_authorize = ssh_dir + '/authorized_keys'
+        with mode_sudo(): 
+            dir_ensure(ssh_dir, recursive=True, mode=700)
+        put(self.ssh_key + '.pub', ssh_authorize, mode=0644, use_sudo=True)
+        cmd = ['chroot', root_dir, 'chown', '-R', self.user, home_dir + '/.ssh']
+        do_sudo(cmd)
         # Copy /etc/ssh
-        try:
-            cmd = ['diff', '/etc/ssh/ssh_host_dsa_key', 
-                    root_dir + '/etc/ssh/ssh_host_dsa_key']
-            sudo(' '.join(cmd))
-        except:
+        text1 = do_sudo(['cat', '/etc/ssh/ssh_host_dsa_key'])
+        text2 = do_sudo(['cat', root_dir+'/etc/ssh/ssh_host_dsa_key'], warn_only=True)
+        if not text1 == text2:
             cmd = ['cp', '-rp', '/etc/ssh/*', root_dir + '/etc/ssh']
-            sudo(' '.join(cmd))
+            do_sudo(cmd)
         # Enable sudo
         config = root_dir + '/etc/sudoers'
         text = user + "   ALL=NOPASSWD:ALL"
-        try:
-            cmd = ['grep', '\"'+text+'\"', config ]
-            sudo(' '.join(cmd))
-        except:
+        cmd = ['grep', '\"'+text+'\"', config]
+        output = do_sudo(cmd, warn_only=True)
+        if not text in output:
             append(config, text, use_sudo=True)
 
     def _unmount_all(self):
@@ -339,30 +325,29 @@ class MakeIso(object):
         """
         print("Unmounting all dir...")
         # Unmount /dev
+        mlist = sudo("df -a")
         for mpoint in [ self.new_squashfs_dir + '/dev', 
                         self.new_squashfs_dir + '/sys', 
                         self.new_squashfs_dir + '/proc',
                         self.base_squashfs_dir ]:
-            try:
-                cmd = ['df', '-a', '|', 'grep', mpoint ]
-                sudo(' '.join(cmd))
+            if mpoint in mlist:
                 cmd = ['umount', mpoint]
-                sudo(' '.join(cmd))
-            except:
-                pass
+                do_sudo(cmd)
 
     def _make_new_squashfs(self):
         """
         Make new squashfs...
         """
         print("Making new squashfs...")
-        try:
-            cmd = ['ls', self.new_squashfs]
-            sudo(' '.join(cmd))
-        except:
+        
+        cmd = ['ls', self.new_squashfs]
+        output = do_sudo(cmd, warn_only=True)
+        if output.startswith(self.new_squashfs):
+            print("New SquashFS already exists. Skip...")
+        else:
             cmd = ['mksquashfs', self.new_squashfs_dir, 
                     self.new_squashfs, '-noappend']
-            sudo(' '.join(cmd))
+            do_sudo(cmd)
 
     def _make_new_iso(self):
         """
@@ -370,26 +355,22 @@ class MakeIso(object):
         """
         print("Making new iso image...")
         new_iso = '/tmp/teefaa/custom.iso'
-        try:
-            cmd = ['ls', new_iso]
-            sudo(' '.join(cmd))
-        except:
+        cmd = ['ls', new_iso]
+        output = do_sudo(cmd, warn_only=True)
+        if output.startswith(new_iso):
+            print("New ISO image aready exists. Skip...")
+        else:
             with cd(self.new_iso_dir):
                 self._update_menu_cfg()
                 self._update_md5sum()
                 self._mkisofs(new_iso)
-        try:
-            cmd = ['ls', self.save_as]
-            sudo(' '.join(cmd))
-        except:
-            print("Downloading new iso image...")
-            get(new_iso, self.save_as)
+        print("Downloading new iso image...")
+        get(new_iso, self.save_as)
 
     def _update_menu_cfg(self):
         """
         Update menu.cfg
         """
-        print("Updating menu.cfg...")
         menu_cfg_file = "isolinux/menu.cfg"
         new_menu_cfg = text_strip_margin("""
         |DEFAULT Teefaa
@@ -402,29 +383,28 @@ class MakeIso(object):
         |    APPEND initrd=/live/initrd.img boot=live config quiet noprompt noeject
         |""")
         cmd = ['chmod', 'u+w', menu_cfg_file]
-        sudo(' '.join(cmd))
+        do_sudo(cmd)
         file_write(menu_cfg_file, new_menu_cfg, sudo=True)
 
     def _update_md5sum(self):
         """
         Update md5sum.txt
         """
-        print("Updating md5sum.txt...")
         cmd = ['rm', '-f', 'md5sum.txt']
-        sudo(' '.join(cmd))
+        do_sudo(cmd)
         cmd = ['find', '-type', 'f', '-print0', '|', 
                 'xargs', '-0', 'md5sum', '|',
                 'grep', '-v', 'isolinux/boot.cat', '|', 
                 'tee md5sum.txt']
-        sudo(' '.join(cmd))
+        do_sudo(cmd)
 
     def _mkisofs(self, new_iso):
-        print("Making new disk image...")
+
         cmd = ['mkisofs', '-D', '-r', '-V', 'CustomISO', '-cache-inodes',
                 '-J', '-l', '-b', 'isolinux/isolinux.bin', '-c', 
                 'isolinux/boot.cat', '-no-emul-boot', '-boot-load-size', 
                 '4', '-boot-info-table', '-o', new_iso, '.']
-        sudo(' '.join(cmd))
+        do_sudo(cmd)
 
     def setup(self):
         self._install_required_pkgs()
@@ -470,7 +450,7 @@ class MakeFilesystem(object):
         print("Making swap partition...")
         p = self.device + str(1 + self.n)
         cmd = ['mkswap', p]
-        sudo(' '.join(cmd))
+        do_sudo(cmd)
 
     def make_fs_system(self):
 
@@ -478,7 +458,7 @@ class MakeFilesystem(object):
         p = self.device + str(2 + self.n)
         mkfs = 'mkfs.' + self.system['format']
         cmd = [mkfs, p]
-        sudo(' '.join(cmd))
+        do_sudo(cmd)
         time.sleep(1)
 
     def make_fs_data(self):
@@ -487,7 +467,7 @@ class MakeFilesystem(object):
         p = self.device + str(3 + self.n)
         mkfs = 'mkfs.' + self.data['format']
         cmd = [mkfs, '-f', p]
-        sudo(' '.join(cmd))
+        do_sudo(cmd)
         time.sleep(1)
 
     def make_fs(self):
@@ -507,22 +487,11 @@ def make_fs():
     mf.make_fs()
 
 @task
-def make_iso():
-    with hide('running', 'stdout'):
-        mkiso = MakeIso()
-        mkiso.run()
+def make_installer():
+    mkinst = MakeInstaller()
+    mkinst.run()
 
 @task
 def make_snapshot():
     mksnap = MakeSnapshot()
     mksnap.run()
-
-@task
-def test(func):
-    """
-    Test functions.
-    param: func - function to test.
-    """
-    mkiso = MakeIso()
-    test_func = getattr(mkiso, func)
-    test_func()

@@ -21,12 +21,11 @@ sub command make-*, mk*
 import os
 import argparse
 from fabric.api import execute, hide
-from cuisine import text_strip_margin
 
-
+from .libexec.common import print_logo
 from .libexec.make import (
         make_snapshot,
-        make_iso,
+        make_installer,
         make_swap,
         make_fs
         )
@@ -36,17 +35,9 @@ class TeefaaMake(object):
     def setup(self, parser):
 
         make_snapshot = parser.add_parser('make-snapshot', help='Make a snapshot')
-        make_snapshot.add_argument(
-                '--host',
-                metavar='<host_name>',
-                help='Set hostname')
-        make_snapshot.add_argument(
-                '--ssh-config',
-                metavar='</path/to/ssh-config>',
-                help='Set the path to ssh-config if you have')
         make_snapshot.set_defaults(func=self.do_make_snapshot)
-        make_iso = parser.add_parser('make-iso', help='Make a iso image')
-        make_iso.set_defaults(func=self.do_make_iso)
+        make_installer = parser.add_parser('make-installer', help='Make a iso image')
+        make_installer.set_defaults(func=self.do_make_installer)
         make_swap = parser.add_parser('make-swap', help='Make swap')
         make_swap.set_defaults(func=self.do_make_swap)
         make_fs = parser.add_parser('make-fs', help='Make filesystem')
@@ -54,21 +45,21 @@ class TeefaaMake(object):
 
     def do_make_snapshot(self, args):
 
-        text = text_strip_margin("""
-        | 
-        | _|_|_|_|_|                        _|_|                      
-        |    |_|      _|_|      _|_|      _|        _|_|_|    _|_|_|  
-        |    |_|    _|_|_|_|  _|_|_|_|  _|_|_|_|  _|    _|  _|    _|  
-        |    |_|    _|        _|          _|      _|    _|  _|    _|  
-        |    |_|      _|_|_|    _|_|_|    _|        _|_|_|    _|_|_|
-        |""")
-        print(text)
-        with hide('running', 'stdout'):
+        print_logo()
+        if args.debug:
             execute(make_snapshot)
+        else:
+            with hide('everything'):
+                execute(make_snapshot)
 
-    def do_make_iso(self, args):
+    def do_make_installer(self, args):
 
-        execute(make_iso)
+        print_logo()
+        if args.debug:
+            execute(make_installer)
+        else:
+            with hide('everything'):
+                execute(make_installer)
 
     def do_make_swap(self, args):
 

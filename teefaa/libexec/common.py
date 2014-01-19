@@ -4,8 +4,10 @@ from __future__ import print_function
 import os
 import sys
 import yaml
+import time
 
-from fabric.api import env
+from fabric.api import env, sudo, settings, hide
+from cuisine import text_strip_margin
 
 def read_config():
     """Make snapshot"""
@@ -31,3 +33,24 @@ def read_config():
         exit(1)
 
     return config
+
+def do_sudo(cmd, warn_only=False):
+
+    if warn_only:
+        with settings(warn_only=True):
+            return sudo(' '.join(cmd))
+    else:
+        return sudo(' '.join(cmd))
+
+def print_logo():
+
+    text = text_strip_margin("""
+    |
+    | _|_|_|_|_|                        _|_|
+    |    |_|      _|_|      _|_|      _|        _|_|_|    _|_|_|
+    |    |_|    _|_|_|_|  _|_|_|_|  _|_|_|_|  _|    _|  _|    _|
+    |    |_|    _|        _|          _|      _|    _|  _|    _|
+    |    |_|      _|_|_|    _|_|_|    _|        _|_|_|    _|_|_|
+    |""")
+    print(text)
+    time.sleep(1)

@@ -24,6 +24,7 @@ import argparse
 from fabric.api import execute, hide
 from cuisine import text_strip_margin
 
+from .libexec.common import print_logo
 from .ssh import check_ssh
 from .libexec.make import make_swap, make_fs
 from .libexec.boot import boot_installer, boot_disk
@@ -39,34 +40,29 @@ class TeefaaProvision(object):
 
     def do_provision(self, args):
 
-        text = text_strip_margin("""
-        | 
-        | _|_|_|_|_|                        _|_|                      
-        |    |_|      _|_|      _|_|      _|        _|_|_|    _|_|_|  
-        |    |_|    _|_|_|_|  _|_|_|_|  _|_|_|_|  _|    _|  _|    _|  
-        |    |_|    _|        _|          _|      _|    _|  _|    _|  
-        |    |_|      _|_|_|    _|_|_|    _|        _|_|_|    _|_|_|
-        |""")
-        print(text)
-        time.sleep(1)
-        print("...")
-        time.sleep(1)
-        with hide('running', 'stdout'):
-            execute(boot_installer)
-            check_ssh()
-            execute(make_partition)
-            time.sleep(2)
-            execute(make_swap)
-            time.sleep(2)
-            execute(make_fs)
-            time.sleep(2)
-            execute(mount_partition)
-            time.sleep(2)
-            execute(install_snapshot)
-            time.sleep(2)
-            execute(condition)
-            time.sleep(2)
-            execute(install_grub)
-            time.sleep(2)
-            execute(boot_disk)
+        print_logo()
+        if args.debug:
+            self._do_provision()
+        else:
+            with hide('everything'):
+                self._do_provision()
 
+    def _do_provision(self):
+
+        execute(boot_installer)
+        check_ssh()
+        execute(make_partition)
+        time.sleep(2)
+        execute(make_swap)
+        time.sleep(2)
+        execute(make_fs)
+        time.sleep(2)
+        execute(mount_partition)
+        time.sleep(2)
+        execute(install_snapshot)
+        time.sleep(2)
+        execute(condition)
+        time.sleep(2)
+        execute(install_grub)
+        time.sleep(2)
+        execute(boot_disk)
