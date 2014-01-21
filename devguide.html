@@ -163,8 +163,21 @@ development branches and can be ignored.</p>
 </div>
 <div class="section" id="documentation">
 <h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h2>
-<p>The documentation of Teefaa is maintained as gh-pages. However currently this is not yet enabled.
-A pointer to the documentation will be available shortly.</p>
+<p>The documentation of Teefaa is maintained as gh-pages. To achive this it is important that you
+first create a documentation without errors. This is done by calling:</p>
+<div class="highlight-python"><pre>make html</pre>
+</div>
+<p>in the main directory. YOu can inspect the result by opening a browser at:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">doc</span><span class="o">/</span><span class="n">build</span><span class="o">/</span><span class="n">html</span><span class="o">/</span><span class="n">index</span><span class="o">.</span><span class="n">html</span>
+</pre></div>
+</div>
+<p>If all loooks good. make sure you have committed <strong>ALL</strong> changes. Than call simply:</p>
+<div class="highlight-python"><pre>make gh-pages</pre>
+</div>
+<p>If everything went well you will be back in the master branch.
+If for some reason there is an error, you may be in the gh-pages branch.
+Make sure to switch back to master and fix your errors there. However if you have
+a working local version this will probably not happen.</p>
 </div>
 </div>
 
