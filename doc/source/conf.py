@@ -51,7 +51,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Cloudmesh Teefaa'
-copyright = u'2012-2014 Indiana University, developed by Koji Tanaka, Gregor von Laszewski, Fugang Wang, Javier Diaz, Allan Streib.'
+copyright = u'2012-2014 Indiana University, developed by K. Tanaka, G. von Laszewski, F. Wang, J. Diaz, A. Streib'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -112,7 +112,7 @@ html_theme = 'bootstrap'
 # documentation.
 html_theme_options = {
     # Navigation bar title. (Default: ``project`` value)
-    'navbar_title': "Cloudmesh",
+    'navbar_title': "Cloudmesh Teefaa",
 
     # Tab name for entire site. (Default: "Site")
     'navbar_site_name': "Site",
