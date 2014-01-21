@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Developers Guide &mdash; Cloudmesh Teefaa 0.4.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootswatch-3.0.0/cosmo/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.4.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="Cloudmesh Teefaa 0.4.0 documentation" href="index.html" />
+    <link rel="next" title="Support" href="support.html" />
+    <link rel="prev" title="Users Guide" href="usersguide.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          Cloudmesh Teefaa</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.4.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="install.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#id1">Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="usersguide.html">Users Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="usersguide.html#make-a-teefaa-iso-pxe-boot-image">Make a Teefaa ISO/PXE boot image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usersguide.html#make-a-snapshot-of-your-system">Make a snapshot of your system</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Developers Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#code">Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#documentation">Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="support.html">Support</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="support.html#bugs-and-issues">Bugs and issues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="support.html#contact-for-futuregrid-users">Contact for FutureGrid users</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="license.html#authors">Authors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="license.html#contributors">Contributors</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Developers Guide</a><ul>
+<li><a class="reference internal" href="#code">Code</a></li>
+<li><a class="reference internal" href="#documentation">Documentation</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="usersguide.html" title="Previous Chapter: Users Guide"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Users Guide</span>
+    </a>
+  </li>
+  <li>
+    <a href="support.html" title="Next Chapter: Support"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Support &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/devguide.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="developers-guide">
+<h1>Developers Guide<a class="headerlink" href="#developers-guide" title="Permalink to this headline">¶</a></h1>
+<p>Teefaa is part of cloudmesh. If you like to contribute, please get in contact with Koji Tanaka (<a class="reference external" href="mailto:kotanaka&#37;&#52;&#48;indiana&#46;edu">kotanaka<span>&#64;</span>indiana<span>&#46;</span>edu</a>)
+and Gregor von Laszewski (<a class="reference external" href="mailto:laszewski&#37;&#52;&#48;gmail&#46;com">laszewski<span>&#64;</span>gmail<span>&#46;</span>com</a>).</p>
+<p>We are following the usual python development standards.</p>
+<p>Teefaa is integrated in a larger project that provides a convenient
+mechnism to interface with several IaaS frameworks and is going to
+provide a User interface to teefaa functionality as part of cloudmesh.</p>
+<div class="section" id="code">
+<h2>Code<a class="headerlink" href="#code" title="Permalink to this headline">¶</a></h2>
+<p>The main code of teefaa is maintained in the &#8220;master&#8221; branch. Oher branches are internal
+development branches and can be ignored.</p>
+</div>
+<div class="section" id="documentation">
+<h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h2>
+<p>The documentation of Teefaa is maintained as gh-pages. However currently this is not yet enabled.
+A pointer to the documentation will be available shortly.</p>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2012-2014 Indiana University, developed by Koji Tanaka, Gregor von Laszewski, Fugang Wang, Javier Diaz, Allan Streib..<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
