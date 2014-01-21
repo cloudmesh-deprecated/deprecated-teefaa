@@ -38,10 +38,3 @@ Make sure to switch back to master and fix your errors there. However if you hav
 a working local version this will probably not happen. 
 
 
-After this the documentation is updated at:
-
-* http://cloudmesh.futuregrid.org/teefaa/
-
-However, please note that cloudmesh has multiple subprojects which are documented at:
-
-* http://cloudmesh.futuregrid.org
