@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>License &mdash; Cloudmesh Teefaa 0.4.0 documentation</title>
+    <title>Installation &mdash; Cloudmesh Teefaa 0.4.0 documentation</title>
     
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -24,7 +24,8 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="top" title="Cloudmesh Teefaa 0.4.0 documentation" href="index.html" />
-    <link rel="prev" title="Support" href="support.html" /> 
+    <link rel="next" title="Users Guide" href="usersguide.html" />
+    <link rel="prev" title="Welcome to Cloudmesh Teefaa!" href="index.html" /> 
   </head>
   <body>
     <div class="related">
@@ -34,7 +35,10 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="support.html" title="Support"
+          <a href="usersguide.html" title="Users Guide"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to Cloudmesh Teefaa!"
              accesskey="P">previous</a> |</li>
         <li><a href="index.html">Cloudmesh Teefaa 0.4.0 documentation</a> &raquo;</li> 
       </ul>
@@ -45,32 +49,37 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="license">
-<h1>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h1>
-<p>Copyright [2012,2013,2014] Indiana University</p>
-<p>Licensed under the Apache License, Version 2.0 (the &#8220;License&#8221;);
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at</p>
-<blockquote>
-<div><a class="reference external" href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></div></blockquote>
-<p>Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an &#8220;AS IS&#8221; BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.</p>
-<div class="section" id="authors">
-<h2>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Koji Tanaka &lt;<a class="reference external" href="mailto:kj&#46;tanaka&#37;&#52;&#48;gmail&#46;com">kj<span>&#46;</span>tanaka<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;</li>
-<li>Javier Diaz &lt;<a class="reference external" href="mailto:javier&#46;diazmontes&#37;&#52;&#48;gmail&#46;com">javier<span>&#46;</span>diazmontes<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;</li>
+<li>Python, version 2.7 ~ 2.7.6</li>
+<li>Python Modules<ul>
+<li>Fabric &gt;= version 1.6</li>
+<li>Cuisine &gt;= version 0.6</li>
+<li>PyYAML &gt;= version 3.10</li>
+</ul>
+</li>
 </ul>
 </div>
-<div class="section" id="contributors">
-<h2>Contributors<a class="headerlink" href="#contributors" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li>Gregor von Laszewski &lt;<a class="reference external" href="mailto:laszewski&#37;&#52;&#48;gmail&#46;com">laszewski<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;</li>
-<li>Fugang Wang &lt;<a class="reference external" href="mailto:kevinwangfg&#37;&#52;&#48;gmail&#46;com">kevinwangfg<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;</li>
-<li>Allan Streib &lt;<a class="reference external" href="mailto:astreib&#37;&#52;&#48;indiana&#46;edu">astreib<span>&#64;</span>indiana<span>&#46;</span>edu</a>&gt;</li>
+<div class="section" id="id1">
+<h2>Installation<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">Download Teefaa from Github:</p>
+<div class="highlight-python"><pre>git clone https://github.com/cloudmesh/teefaa.git</pre>
+</div>
+</li>
+<li><p class="first">Install:</p>
+<div class="highlight-python"><pre>cd teefaa
+python setup.py install</pre>
+</div>
+</li>
+<li><p class="first">Confirm:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">teefaa</span> <span class="o">--</span><span class="n">help</span>
+</pre></div>
+</div>
+</li>
 </ul>
 </div>
 </div>
@@ -83,19 +92,22 @@ limitations under the License.</p>
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">License</a><ul>
-<li><a class="reference internal" href="#authors">Authors</a></li>
-<li><a class="reference internal" href="#contributors">Contributors</a></li>
+<li><a class="reference internal" href="#">Installation</a><ul>
+<li><a class="reference internal" href="#requirements">Requirements</a></li>
+<li><a class="reference internal" href="#id1">Installation</a></li>
 </ul>
 </li>
 </ul>
 
   <h4>Previous topic</h4>
-  <p class="topless"><a href="support.html"
-                        title="previous chapter">Support</a></p>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Welcome to Cloudmesh Teefaa!</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="usersguide.html"
+                        title="next chapter">Users Guide</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
-    <li><a href="_sources/license.txt"
+    <li><a href="_sources/install.txt"
            rel="nofollow">Show Source</a></li>
   </ul>
 <div id="searchbox" style="display: none">
@@ -122,7 +134,10 @@ limitations under the License.</p>
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="support.html" title="Support"
+          <a href="usersguide.html" title="Users Guide"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to Cloudmesh Teefaa!"
              >previous</a> |</li>
         <li><a href="index.html">Cloudmesh Teefaa 0.4.0 documentation</a> &raquo;</li> 
       </ul>

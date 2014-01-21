@@ -1,22 +1,20 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Users Guide &mdash; Cloudmesh Teefaa  documentation</title>
+    <title>Users Guide &mdash; Cloudmesh Teefaa 0.4.0 documentation</title>
     
-    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
-    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '',
+        VERSION:     '0.4.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -25,217 +23,165 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
-    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
-    <link rel="top" title="Cloudmesh Teefaa  documentation" href="index.html" />
-    <link rel="next" title="Instalation" href="adminguide.html" />
-    <link rel="prev" title="Welcome to Cloudmesh Teefaa!" href="index.html" />
-<meta charset='utf-8'>
-<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
-<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
-<meta name="apple-mobile-web-app-capable" content="yes">
-
+    <link rel="top" title="Cloudmesh Teefaa 0.4.0 documentation" href="index.html" />
+    <link rel="next" title="Developers Guide" href="devguide.html" />
+    <link rel="prev" title="Installation" href="install.html" /> 
   </head>
   <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="devguide.html" title="Developers Guide"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="install.html" title="Installation"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">Cloudmesh Teefaa 0.4.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
 
-  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="index.html"><img src="_static/fg-logo-white-24x36.png">
-          Cloudmesh teefaa</a>
-        <span class="navbar-text navbar-version pull-left"><b>v0.4.0
-</b></span>
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="users-guide">
+<h1>Users Guide<a class="headerlink" href="#users-guide" title="Permalink to this headline">¶</a></h1>
+<p>Teefaa is a tool to make a snapshot of a Operating System and provision it on another
+Baremetal/Virtual Machine. It uses ISO/PXE Boot image in the provisioning
+process. This is conducted in three major steps:</p>
+<ol class="arabic simple">
+<li>Make a Teefaa ISO/PXE boot image.</li>
+<li>Make a snapshot of your system.</li>
+<li>Provision your system snapshot on another machine.</li>
+</ol>
+<p>An easy way to try Teefaa is to use VirtualBox as Teefaa can make a snapshot of your system
+and provision it on a VM of your VirtualBox. We walk you through the process next.</p>
+<div class="section" id="make-a-teefaa-iso-pxe-boot-image">
+<h2>Make a Teefaa ISO/PXE boot image<a class="headerlink" href="#make-a-teefaa-iso-pxe-boot-image" title="Permalink to this headline">¶</a></h2>
+<p>The ISO image of Teefaa is based on Debian7. However, you can create the image with Ubuntu or Debian also.
+In this example we use an Ubuntu VM with Vagrant. The Vagrantfile is listed next:</p>
+<div class="highlight-python"><pre>Vagrant.configure("2") do |config|
+
+  config.vm.define :ubuntu1204 do |ubuntu1204|
+    ubuntu1204.vm.box = 'ubuntu-12.04'
+    ubuntu1204.vm.box_url = 'http://cloud-images.ubuntu.com/vagrant/precise/current/precise-server-cloudimg-amd64-vagrant-disk1.box'
+    ubuntu1204.vm.hostname = "ubuntu1204"
+  end
+
+end</pre>
+</div>
+<p>Next, you can boot the VM as follows:</p>
+<div class="highlight-python"><pre>vagrant up ubuntu1204
+vagrant ssh-config ubuntu1204 &gt; ssh-config</pre>
+</div>
+<p>The ssh-config is used by Teefaa to login the VM.</p>
+<p>Next, write the configuration for making ISO image and save the file named as Teefaafile.:</p>
+<div class="highlight-python"><pre>ssh_config: ssh-config
+
+iso_config:
+  base_iso: debian-live-7.2-amd64-standard.iso
+  base_iso_url: http://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/debian-live-7.2-amd64-standard.iso
+  builder:
+    hostname: ubuntu1204
+    distro: ubuntu
+  save_as: teefaa-debian-live.iso</pre>
+</div>
+<p>Then, execute this command.:</p>
+<div class="highlight-python"><pre>teefaa make-iso</pre>
+</div>
+<p>This will generate the custom ISO image and save it as teefaa-debian-live.iso.</p>
+</div>
+<div class="section" id="make-a-snapshot-of-your-system">
+<h2>Make a snapshot of your system<a class="headerlink" href="#make-a-snapshot-of-your-system" title="Permalink to this headline">¶</a></h2>
+<p>To make a snapshot of your system, you need to update your ssh-config to be able to login
+to the host by ssh &lt;hostname&gt;.:</p>
+<div class="highlight-python"><pre>Host ubuntu1204
+  HostName 127.0.0.1
+  User vagrant
+  Port 2222
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no
+  PasswordAuthentication no
+  IdentityFile /home/ktanaka/.vagrant.d/insecure_private_key
+  IdentitiesOnly yes
+  LogLevel FATAL
+# Add the host to make a snapshot
+Host host001
+  HostName 192.168.32.102
+  User myuser
+  IdentityFile /path/to/private_key
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no</pre>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
       </div>
-
-        <div class="collapse navbar-collapse nav-collapse">
-          <ul class="nav navbar-nav">
-            <li class="divider-vertical"></li>
-            
-            
-              <li class="dropdown globaltoc-container">
-  <a href="index.html"
-     class="dropdown-toggle"
-     data-toggle="dropdown">Site <b class="caret"></b></a>
-  <ul class="dropdown-menu globaltoc"
-    ><ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="">Users Guide</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#make-a-teefaa-iso-pxe-boot-image">Make a Teefaa ISO/PXE boot image</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#make-a-snapshot-of-your-system">Make a snapshot of your system</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="adminguide.html">Instalation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="adminguide.html#system-requirements">System requirements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="adminguide.html#download">Download</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="modules.html">Modules</a></li>
-<li class="toctree-l1"><a class="reference internal" href="license.html">License</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="license.html#authors">Authors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="license.html#contributors">Contributors</a></li>
-</ul>
-</li>
-</ul>
-</ul>
-</li>
-              
-                <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
-  <ul class="dropdown-menu localtoc"><ul>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
 <li><a class="reference internal" href="#">Users Guide</a><ul>
 <li><a class="reference internal" href="#make-a-teefaa-iso-pxe-boot-image">Make a Teefaa ISO/PXE boot image</a></li>
 <li><a class="reference internal" href="#make-a-snapshot-of-your-system">Make a snapshot of your system</a></li>
 </ul>
 </li>
 </ul>
-</ul>
-</li>
-              
-            
-            
-              
-                
-  <li>
-    <a href="index.html" title="Previous Chapter: Welcome to Cloudmesh Teefaa!"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Welcome to Cloud...</span>
-    </a>
-  </li>
-  <li>
-    <a href="adminguide.html" title="Next Chapter: Instalation"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Instalation &raquo;</span>
-    </a>
-  </li>
-              
-            
-            
-            
-            
-          </ul>
 
-          
-            
-<form class="navbar-form navbar-right" action="search.html" method="get">
- <div class="form-group">
-  <input type="text" name="q" class="form-control" placeholder="Search" />
- </div>
-  <input type="hidden" name="check_keywords" value="yes" />
-  <input type="hidden" name="area" value="default" />
-</form>
-          
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="install.html"
+                        title="previous chapter">Installation</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="devguide.html"
+                        title="next chapter">Developers Guide</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/usersguide.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
+      </div>
+      <div class="clearer"></div>
     </div>
-  </div>
-
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      
-  <div class="section" id="users-guide">
-<h1>Users Guide<a class="headerlink" href="#users-guide" title="Permalink to this headline">¶</a></h1>
-<p>What Teefaa actually does is to make a snapshot of a Operating System and provision it
-on another Baremetal/Virtual Machine, and it uses ISO/PXE Boot image in the provisioning
-process. So there are three major steps as listed below.</p>
-<ol class="arabic simple">
-<li>Make a Teefaa ISO/PXE boot image.</li>
-<li>Make a snapshot of your system.</li>
-<li>Provision your system snapshot on another machine.</li>
-</ol>
-<p>An easy way to try Teefaa is to use VirtualBox. So it would be great if you have a
-baremetal machine which you want to backup. Teefaa can make a snapshot of your system
-and provision it on a VM of your VirtualBox.</p>
-<p>I use Vagrant to simplify the procesedure, so please install VirtualBox and Vagrant
-before starting this tutorial.</p>
-<div class="section" id="make-a-teefaa-iso-pxe-boot-image">
-<h2>Make a Teefaa ISO/PXE boot image<a class="headerlink" href="#make-a-teefaa-iso-pxe-boot-image" title="Permalink to this headline">¶</a></h2>
-<p>ISO image of Teefaa is based on Debian7 and you can create the image with Ubuntu or Debian.
-Here I&#8217;ll use Ubuntu VM with Vagrant. Here&#8217;s my example Vagrantfile.</p>
-<blockquote>
-<div><p>Vagrant.configure(&#8220;2&#8221;) do <a href="#id1"><span class="problematic" id="id2">|config|</span></a></p>
-<blockquote>
-<div><dl class="docutils">
-<dt>config.vm.define :ubuntu1204 do <a href="#id3"><span class="problematic" id="id4">|ubuntu1204|</span></a></dt>
-<dd>ubuntu1204.vm.box = &#8216;ubuntu-12.04&#8217;
-ubuntu1204.vm.box_url = &#8216;<a class="reference external" href="http://cloud-images.ubuntu.com/vagrant/precise/current/precise-server-cloudimg-amd64-vagrant-disk1.box">http://cloud-images.ubuntu.com/vagrant/precise/current/precise-server-cloudimg-amd64-vagrant-disk1.box</a>&#8216;
-ubuntu1204.vm.hostname = &#8220;ubuntu1204&#8221;</dd>
-</dl>
-<p>end</p>
-</div></blockquote>
-<p>end</p>
-</div></blockquote>
-<p>And, boot the VM.</p>
-<blockquote>
-<div>vagrant up ubuntu1204
-vagrant ssh-config ubuntu1204 &gt; ssh-config</div></blockquote>
-<p>The ssh-config is used by Teefaa to login the VM.</p>
-<p>Next, write the configuration for making ISO image and save the file named as Teefaafile.</p>
-<blockquote>
-<div><p>ssh_config: ssh-config</p>
-<dl class="docutils">
-<dt>iso_config:</dt>
-<dd><p class="first">base_iso: debian-live-7.2-amd64-standard.iso
-base_iso_url: <a class="reference external" href="http://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/debian-live-7.2-amd64-standard.iso">http://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/debian-live-7.2-amd64-standard.iso</a>
-builder:</p>
-<blockquote>
-<div>hostname: ubuntu1204
-distro: ubuntu</div></blockquote>
-<p class="last">save_as: teefaa-debian-live.iso</p>
-</dd>
-</dl>
-</div></blockquote>
-<p>Then, execute this command.</p>
-<blockquote>
-<div>teefaa make-iso</div></blockquote>
-<p>This will generate the custom ISO image and save it as teefaa-debian-live.iso.</p>
-</div>
-<div class="section" id="make-a-snapshot-of-your-system">
-<h2>Make a snapshot of your system<a class="headerlink" href="#make-a-snapshot-of-your-system" title="Permalink to this headline">¶</a></h2>
-<p>To make a snapshot of your system, you need to update your ssh-config to be able to login
-to the host by ssh &lt;hostname&gt;.</p>
-<blockquote>
-<div><dl class="docutils">
-<dt>Host ubuntu1204</dt>
-<dd>HostName 127.0.0.1
-User vagrant
-Port 2222
-UserKnownHostsFile /dev/null
-StrictHostKeyChecking no
-PasswordAuthentication no
-IdentityFile /home/ktanaka/.vagrant.d/insecure_private_key
-IdentitiesOnly yes
-LogLevel FATAL</dd>
-</dl>
-<p># Add the host to make a snapshot
-Host host001</p>
-<blockquote>
-<div>HostName 192.168.32.102
-User myuser
-IdentityFile /path/to/private_key
-UserKnownHostsFile /dev/null
-StrictHostKeyChecking no</div></blockquote>
-</div></blockquote>
-</div>
-</div>
-
-
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="devguide.html" title="Developers Guide"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="install.html" title="Installation"
+             >previous</a> |</li>
+        <li><a href="index.html">Cloudmesh Teefaa 0.4.0 documentation</a> &raquo;</li> 
+      </ul>
     </div>
-      
-  </div>
-</div>
-<footer class="footer">
-  <div class="container">
-    <p class="pull-right">
-      <a href="#">Back to top</a>
-      
-    </p>
-    <p>
-        &copy; Copyright 2012, Developed as part of FutureGrid by Koji Tanaka, Gregor von Laszewski, Fugang Wang, Javier Diaz.<br/>
-    </p>
-  </div>
-</footer>
+    <div class="footer">
+        &copy; Copyright 2012-2014 Indiana University, developed by Koji Tanaka, Gregor von Laszewski, Fugang Wang, Javier Diaz, Allan Streib..
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.
+    </div>
   </body>
 </html>
