@@ -1,27 +1,22 @@
 Users Guide
 =====================================
 
-What Teefaa actually does is to make a snapshot of a Operating System and provision it
-on another Baremetal/Virtual Machine, and it uses ISO/PXE Boot image in the provisioning
-process. So there are three major steps as listed below.
+Teefaa is a tool to make a snapshot of a Operating System and provision it on another 
+Baremetal/Virtual Machine. It uses ISO/PXE Boot image in the provisioning
+process. This is conducted in three major steps:
 
 1. Make a Teefaa ISO/PXE boot image.
 2. Make a snapshot of your system.
 3. Provision your system snapshot on another machine.
 
-An easy way to try Teefaa is to use VirtualBox. So it would be great if you have a
-baremetal machine which you want to backup. Teefaa can make a snapshot of your system
-and provision it on a VM of your VirtualBox.
-
-I use Vagrant to simplify the procesedure, so please install VirtualBox and Vagrant
-before starting this tutorial.
-
+An easy way to try Teefaa is to use VirtualBox as Teefaa can make a snapshot of your system
+and provision it on a VM of your VirtualBox. We walk you through the process next.
 
 Make a Teefaa ISO/PXE boot image
 --------------------------------
 
-ISO image of Teefaa is based on Debian7 and you can create the image with Ubuntu or Debian.
-Here I'll use Ubuntu VM with Vagrant. Here's my example Vagrantfile.::
+The ISO image of Teefaa is based on Debian7. However, you can create the image with Ubuntu or Debian also.
+In this example we use an Ubuntu VM with Vagrant. The Vagrantfile is listed next::
 
     Vagrant.configure("2") do |config|
     
@@ -33,7 +28,7 @@ Here I'll use Ubuntu VM with Vagrant. Here's my example Vagrantfile.::
 
     end
 
-And, boot the VM.::
+Next, you can boot the VM as follows::
 
     vagrant up ubuntu1204
     vagrant ssh-config ubuntu1204 > ssh-config
