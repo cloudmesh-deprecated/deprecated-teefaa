@@ -23,7 +23,7 @@ from cuisine import (
         text_strip_margin
         )
 
-from .common import read_config
+from .common import read_config, do_sudo
 
 
 class Boot(object):
@@ -47,7 +47,8 @@ class Boot(object):
         print("Shutting down '{h}'...".format(h=self.hostname))
         with hide('running', 'stdout'):
             try:
-                sudo("shutdown -h now")
+                with settings(abort_on_prompts=True):
+                    do_sudo(['shutdown', '-h','now'])
             except fabric.exceptions.NetworkError:
                 print("machine is offline.")
                 exit(1)
@@ -57,7 +58,8 @@ class Boot(object):
         print("Shutting down '{h}'...".format(h=self.hostname))
         with hide('running', 'stdout'):
             try:
-                sudo("shutdown -h now")
+                with settings(abort_on_prompts=True):
+                    do_sudo(['shutdown', '-h','now'])
             except fabric.exceptions.NetworkError:
                 print("machine is offline.")
                 exit(1)
@@ -126,10 +128,12 @@ class Boot(object):
         ipmi_password = self.power_driver_config['ipmi_password']
         ipmi_user = self.power_driver_config['ipmi_user']
         bmc_address = self.power_driver_config['bmc_address']
+        #FNULL = open(os.devnull, 'w')
         cmd = ['ipmitool', '-I', 'lanplus', '-U', ipmi_user, '-P', ipmi_password, '-E',
                 '-H', bmc_address, 'power', 'status']
         subprocess.check_call(cmd)
         time.sleep(1)
+        #FNULL.close()
 
     def setup_installer_boot(self):
         """
@@ -150,16 +154,25 @@ class Boot(object):
         time.sleep(1)
         self._check_id_controller_virtualbox()
 
-        cmd = ['VBoxManage', 'storageattach', vbox_name, '--storagectl', 'IDE Controller', 
+        try:
+            cmd = ['VBoxManage', 'storageattach', vbox_name, '--storagectl', 'IDE Controller', 
                 '--port', '0', '--device', '1', '--type', 'dvddrive', '--medium', iso_file]
-        subprocess.check_call(cmd)
-        time.sleep(1)
-        cmd = ['VBoxManage', 'modifyvm', vbox_name, '--boot1', 'dvd']
-        subprocess.check_call(cmd)
-        time.sleep(1)
-        cmd = ['VBoxManage', 'modifyvm', vbox_name, '--boot2', 'disk']
-        subprocess.check_call(cmd)
-        time.sleep(1)
+            subprocess.check_call(cmd)
+            time.sleep(1)
+        except subprocess.CalledProcessError:
+            pass
+        try:
+            cmd = ['VBoxManage', 'modifyvm', vbox_name, '--boot1', 'dvd']
+            subprocess.check_call(cmd)
+            time.sleep(1)
+        except subprocess.CalledProcessError:
+            pass
+        try:
+            cmd = ['VBoxManage', 'modifyvm', vbox_name, '--boot2', 'disk']
+            subprocess.check_call(cmd)
+            time.sleep(1)
+        except subprocess.CalledProcessError:
+            pass
 
     def _check_id_controller_virtualbox(self):
 
@@ -174,14 +187,23 @@ class Boot(object):
 
     def _setup_installer_boot_pxe(self):
 
+        print("Boot installer...")
+
         server = self.boot_driver_config['pxe_server']
         user = self.boot_driver_config['pxe_server_user']
         pxe_config = self.boot_driver_config['boot_config_file']
         pxe_config_installer = self.boot_driver_config['installer_boot_config_file']
-        env.host_string = server
-        env.user = user
-        cmd = ['cp', pxe_config_installer, pxe_config]
+        #NOTE: This will hit a bug of Fabric
+        #env.host_string = server
+        #env.user = user
+        #cmd = ['cat', pxe_config_installer, '>', pxe_config]
         #run(' '.join(cmd))
+        # Workaround
+        cmd = ['ssh', '-F', env.ssh_config_path, '-i', 
+                env.key_filename, user+'@'+server, 
+                'cp', pxe_config_installer, pxe_config]
+        with hide('stderr'):
+            local(' '.join(cmd))
 
     def setup_diskboot(self):
         """
@@ -199,10 +221,15 @@ class Boot(object):
         user = self.boot_driver_config['pxe_server_user']
         pxe_config = self.boot_driver_config['boot_config_file']
         pxe_config_localdisk = self.boot_driver_config['disk_boot_config_file']
-        env.host_string = server
-        env.user = user
-        cmd = ['cat', pxe_config_localdisk, '>', pxe_config]
-        run(' '.join(cmd))
+        #env.host_string = server
+        #env.user = user
+        #cmd = ['cat', pxe_config_localdisk, '>', pxe_config]
+        #run(' '.join(cmd))
+        cmd = ['ssh', '-F', env.ssh_config_path, '-i', 
+                env.key_filename, user+'@'+server, 
+                'cp', pxe_config_localdisk, pxe_config]
+        with hide('stderr'):
+            local(' '.join(cmd))
 
     def _setup_diskboot_virtualbox(self):
         """
@@ -233,10 +260,12 @@ class Boot(object):
         ipmi_password = self.power_driver_config['ipmi_password']
         ipmi_user = self.power_driver_config['ipmi_user']
         bmc_address = self.power_driver_config['bmc_address']
+        #FNULL = open(os.devnull, 'w')
         cmd = ['ipmitool', '-I', 'lanplus', '-U', ipmi_user, '-P', ipmi_password, '-E',
                 '-H', bmc_address, 'power', 'on']
         subprocess.check_call(cmd)
         time.sleep(1)
+        #FNULL.close()
 
     def _power_on_virtualbox(self):
         """
