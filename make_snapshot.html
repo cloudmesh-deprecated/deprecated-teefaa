@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Module Name: system &mdash; Cloudmesh Teefaa 0.4.0 documentation</title>
+    <title>Make a system snapshot &mdash; Cloudmesh Teefaa 0.4.0 documentation</title>
     
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -29,6 +29,8 @@
     <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="Cloudmesh Teefaa 0.4.0 documentation" href="index.html" />
+    <link rel="next" title="Support" href="support.html" />
+    <link rel="prev" title="Installation" href="install.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -61,16 +63,16 @@
      class="dropdown-toggle"
      data-toggle="dropdown">Site <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
-    ><ul>
+    ><ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="install.html#requirements">Requirements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="install.html#id1">Installation</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="make_snapshot.html">Make a system snapshot</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="make_snapshot.html#prerequisites">Prerequisites</a></li>
-<li class="toctree-l2"><a class="reference internal" href="make_snapshot.html#write-teefaafile-yml">Write Teefaafile.yml</a></li>
-<li class="toctree-l2"><a class="reference internal" href="make_snapshot.html#notes-about-the-system-size">Notes about the system size</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Make a system snapshot</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#write-teefaafile-yml">Write Teefaafile.yml</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#notes-about-the-system-size">Notes about the system size</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="support.html">Support</a><ul>
@@ -90,8 +92,10 @@
                 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">Module Name: system</a><ul>
-<li><a class="reference internal" href="#system-power">system.power</a></li>
+<li><a class="reference internal" href="#">Make a system snapshot</a><ul>
+<li><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li><a class="reference internal" href="#write-teefaafile-yml">Write Teefaafile.yml</a></li>
+<li><a class="reference internal" href="#notes-about-the-system-size">Notes about the system size</a></li>
 </ul>
 </li>
 </ul>
@@ -102,6 +106,14 @@
             
               
                 
+  <li>
+    <a href="install.html" title="Previous Chapter: Installation"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Installation</span>
+    </a>
+  </li>
+  <li>
+    <a href="support.html" title="Next Chapter: Support"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Support &raquo;</span>
+    </a>
+  </li>
               
             
             
@@ -109,7 +121,7 @@
             
               <li class="hidden-sm">
 <div id="sourcelink">
-  <a href="_sources/system.txt"
+  <a href="_sources/make_snapshot.txt"
      rel="nofollow">Source</a>
 </div></li>
             
@@ -133,28 +145,91 @@
   <div class="row">
     <div class="col-md-12">
       
-  <a href="https://github.com/futuregrid/teefaa"
-    class="visible-desktop"><img
-   style="position: absolute; top: 40px; right: 0; border: 0;"
-   src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png"
-   alt="Fork me on GitHub"></a><div class="section" id="module-name-system">
-<h1>Module Name: system<a class="headerlink" href="#module-name-system" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="system-power">
-<h2>system.power<a class="headerlink" href="#system-power" title="Permalink to this headline">¶</a></h2>
-<p>Utility for turn on, off and check status of power.</p>
-<p>Check status:</p>
-<div class="highlight-python"><pre>fab system.power:[hostname],status</pre>
+  <div class="section" id="make-a-system-snapshot">
+<h1>Make a system snapshot<a class="headerlink" href="#make-a-system-snapshot" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">You need to be able to ssh login to the system.</p>
+</li>
+<li><p class="first">You need to be able to use sudo.</p>
+</li>
+<li><p class="first">The partition for /tmp on the system has to have enough
+space to have clone of system and the compressed image file.
+Roughly estimate, compressed image will be 30~40% of original,
+so /tmp should be able to have 130~140% of system size. You can
+check it df command.:</p>
+<div class="highlight-python"><pre>df -h
+
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sda2       9.2G  2.1G  6.7G  24% /
+udev            237M  4.0K  237M   1% /dev
+tmpfs            99M  220K   99M   1% /run
+none            5.0M     0  5.0M   0% /run/lock
+none            246M     0  246M   0% /run/shm</pre>
 </div>
-<p>Output:</p>
-<div class="highlight-python"><pre>[hostname]
--------------------------------------------------
-Chassis Power is [on/off]</pre>
+<p>In this example, you need to have 2.1*140/100 = 2.94G on the same
+partition /dev/sda2.</p>
+</li>
+</ul>
 </div>
-<p>Turn on the power:</p>
-<div class="highlight-python"><pre>fab system.power:[hostname],on</pre>
+<div class="section" id="write-teefaafile-yml">
+<h2>Write Teefaafile.yml<a class="headerlink" href="#write-teefaafile-yml" title="Permalink to this headline">¶</a></h2>
+<p>Create a directory for teefaa and write Teefaafile.yml.
+This example is for a machine named host1 which is
+running Ubuntu-12.04 LTS.:</p>
+<div class="highlight-python"><pre>mkdir -p teefaa/host1
+cd teefaa/host1
+vi Teefaafile.yml</pre>
 </div>
-<p>Turn off the power:</p>
-<div class="highlight-python"><pre>fab system.power:[hostname],off</pre>
+<div class="highlight-python"><pre># Teefaafile.yml
+
+snapshot_config:
+  hostname: host1
+  snapshot_path: .teefaa/host1-2014-01-20.squashfs
+  os:
+    distro: ubuntu
+    ver: 12.04
+
+ssh_config: .teefaa/ssh_config</pre>
+</div>
+<p>And then, Write ssh_config:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">mkdir</span> <span class="o">.</span><span class="n">teefaa</span>
+<span class="n">vi</span> <span class="o">.</span><span class="n">teefaa</span><span class="o">/</span><span class="n">ssh_config</span>
+</pre></div>
+</div>
+<div class="highlight-python"><pre>Host host1
+  Hostname &lt;ip address&gt;
+  User &lt;username&gt;
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no
+  PasswordAuthentication no
+  IdentityFile &lt;path to ssh private key&gt;
+  IdentitiesOnly yes
+  LogLevel FATAL</pre>
+</div>
+<p>Execute teefaa make-snapshot.</p>
+<div class="highlight-python"><pre>teefaa make-snapshot</pre>
+</div>
+<p>It will take a while to finish this.</p>
+</div>
+<div class="section" id="notes-about-the-system-size">
+<h2>Notes about the system size<a class="headerlink" href="#notes-about-the-system-size" title="Permalink to this headline">¶</a></h2>
+<p>As you can see, Teefaa uses ssh and transfer the system image over the network.
+If your system is big, it will take very long. We strongly recommend you
+sepalately have your large data on a different partition and save/transfer
+data in another way.</p>
+<p>If you have large data and want to exclude the directories, you can exclude them by
+adding exclude option on the Teefaafile.yml like this.</p>
+<div class="highlight-python"><pre>snapshot_config:
+  hostname: host1
+  snapshot_path: .teefaa/host1-2014-01-20.squashfs
+  os:
+    distro: ubuntu
+    ver: 12.04
+  exclude:
+    - /path/to/large/dir1
+    - /path/to/large/dir2</pre>
 </div>
 </div>
 </div>
