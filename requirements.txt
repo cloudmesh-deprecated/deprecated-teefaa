@@ -1,0 +1,5 @@
+sphinx
+sphinx_bootstrap_theme
+pyaml
+fabric
+cuisine
