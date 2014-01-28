@@ -103,6 +103,9 @@ clean:
 # SPHINX DOC
 ###############################################################################
 
+html: sphinx
+	echo "done"
+
 sphinx:
 	cd doc; make html
 
